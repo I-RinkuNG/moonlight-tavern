@@ -6,10 +6,15 @@
 [CmdletBinding()]
 param(
   [string]$IndexPath = "$HOME\.claude\projects\C--Users-inuko--claude\memory\notebooklm_research_index.md",
-  [string]$OutPath   = (Join-Path $PSScriptRoot "..\data\research.json")
+  [string]$OutPath
 )
 
 $ErrorActionPreference = "Stop"
+
+# Resolve script dir robustly ($PSScriptRoot is empty when invoked via a relative -File path in PS 5.1)
+$scriptDir = $PSScriptRoot
+if (-not $scriptDir) { $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition }
+if (-not $OutPath)   { $OutPath = Join-Path $scriptDir "..\data\research.json" }
 
 if (-not (Test-Path $IndexPath)) {
   Write-Error "Index not found: $IndexPath"
