@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ทีมงาน · Moonlight Tavern</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="moon">🌙</span><span data-i18n="brand">โรงเตี๊ยมแสงจันทร์</span></a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">หน้าแรก</a>
+        <a href="agents.html" data-i18n="nav.agents">ทีมงาน</a>
+        <a href="pipeline.html" data-i18n="nav.pipeline">ขั้นตอน</a>
+        <a href="knowledge.html" data-i18n="nav.knowledge">คลังความรู้</a>
+      </div>
+      <button class="lang-toggle" type="button">EN</button>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="hero" style="padding:54px 0 24px">
+      <h1 data-i18n="agents.title">ทีมงานโรงเตี๊ยม</h1>
+      <p class="lede" data-i18n="agents.lede">หกสมาชิก แต่ละคนถนัดคนละด้าน</p>
+    </header>
+
+    <section class="section">
+      <div class="grid cols-3" id="agent-grid"></div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p data-i18n="footer.built">สร้างโดยทีม Moonlight Tavern</p>
+  </footer>
+
+  <div class="modal-backdrop" id="modal"><div class="modal modal-body"></div></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,898 @@
+[
+    {
+        "notebook_id":  "a1c83acc-fd2f-47aa-a473-16a9a419e40f",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-06-01",
+        "title":  "AutoResearch: The Future of Autonomous Recursive Self-Improvement",
+        "covers":  "AutoResearch architecture (Karpathy\u0027s 3-file design: program.md/train.py/prepare.py); recursive self-improvement mechanism (closed-loop: hypothesis→implementation→evaluation→commit/reset); multi-agent research pipelines (AutoResearchClaw 23-stage, AI Scientist-v2 agentic tree search, Sparks proposer-critic, RoboPhD ELO selection); improvement mechanisms (proposer-critic loops, dual-memory systems, MetaClaw cross-run learning, self-healing frameworks); RSI limitations (self-improvement paradox, inability to self-correct reasoning, GV-Gap saturation within 2-3 rounds, data autophagy/model collapse, small model barrier \u003c7B, theoretical limits: Munchausen/Löb/Procrastination); literature review at scale (PICO planning, OpenAlex 474M+ papers, Elicit 99.4% accuracy, Consensus Meter, 4-layer citation verification, BLEU/ROUGE/Jaccard metrics); governance and safety (Athens Roundtable 2025 red lines: no autonomous weight updates, no infrastructure access, no steganographic collusion; IVOs, cryptographic commitments; alignment degradation, responsibility gap, sandbagging risks)"
+    },
+    {
+        "notebook_id":  "8ebc3f60-65df-4e02-bf59-c00f63e4ddb4",
+        "sources":  "51",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-06-01",
+        "title":  "A Developer\u0027s Guide to LangChain, LangGraph, LangFlow, and LangSmith",
+        "covers":  "LangChain fundamentals (chains/agents/memory/retrievers, LCEL pipe-syntax, streaming/async, production path vs AgentExecutor); LangGraph state machine model (State TypedDict, Nodes, Edges, StateGraph; linear vs cyclical comparison table); multi-agent patterns (supervisor, hierarchical, planner-executor, concurrent/parallel); HITL via interrupts + PostgresSaver checkpointing + Time-Travel Debugging; production challenges (infinite loops, state explosion, state oscillation, distributed consistency, debugging opacity); LangFlow visual canvas (React Flow, Playground, custom Python components); LangFlow deployment (Flow-as-API, embedded widget, MCP server, Docker+PostgreSQL, DataStax cloud); LangFlow limitations (performance overhead, prototyping trap, RCE vulnerability surface, weak cyclical support); LangSmith Run Tree tracing (inputs/outputs/latency/tokens/cost per step); evaluation (golden datasets, LLM-as-judge, side-by-side comparison, cot_qa); CI/CD (Pytest plugin, canary deploys, Prompt Hub versioning, production monitoring, ZenML outer loop)"
+    },
+    {
+        "notebook_id":  "9e336ad2-482f-49f8-8d53-49ae788877fc",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-06-01",
+        "title":  "Zero-Cost Claude Code: Building AI Apps Without Subscriptions",
+        "covers":  "Zero-cost Claude Code access routes (5 categories: new account credits $5, guest passes 7-day, startup programs $25K–$100K+, AWS Bedrock/GCP Vertex credits, academic/OSS programs); free API tiers ecosystem for AI app building (Google Gemini 1,500 RPD, OpenRouter 25+ free models 200 RPD, Groq 14,400 RPD, HuggingFace variable, Cohere 1K calls/month, Cloudflare Workers AI, Cerebras, Mistral, GitHub Models); \"API stacking\" strategy (up to 5,000 free req/day from Google+Groq+Cerebras); open-source coding agent alternatives comparison table (Gemini CLI/Aider/Cline/Continue.dev/OpenCode/Roo Code/Ollama — setup complexity vs reasoning depth vs best use); token cost reduction techniques (prompt caching 90% savings, model routing Haiku 19x cheaper, Batch API 50% discount, /compact 60–80% context reduction, WarpGrep MCP, Morph Fast Apply, ccusage/cmonitor tools); no-code/low-code platforms (Base44 free Claude 4.7 Opus access, MindStudio execution boundaries, NxCode, Lovable/Bolt/Antigravity); key tradeoff: platforms vs direct API stacking; Gemini CLI sunset June 18 2026 → Antigravity CLI"
+    },
+    {
+        "notebook_id":  "e69e9322-8824-414e-9d5e-b90dd38fb462",
+        "sources":  "60",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-06-01",
+        "title":  "Terra: The High-Performance AI Terminal Built with Rust",
+        "covers":  "Terra architecture (Rust backend + Tauri 2 + Xterm.js WebGL + CodeMirror 6 + React; 7MB binary vs Warp 400MB+; sub-300ms startup; native system webview replaces Chromium); AI agent design (Vercel AI SDK; GPT-4o/Claude 3.5/Gemma 4 local via LM Studio; Terra.md project memory; scoped to codebase not UI; reviewable diffs; semantic code search; MCP integration; privacy pages; sub-agent support); Agentic Development Environment concept (terminal+editor+browser+file explorer unified; SDLC coverage; enterprise context persistence; eliminates context-switching); competitive comparison (vs Warp: 50x smaller, Apache 2.0, terminal-feeling; vs Ghostty: Ghostty wins raw throughput 5.1s/~2ms latency via Metal; vs Alacritty: 22MB idle vs Terra\u0027s higher but feature-rich; vs Rio: visual fidelity focus); benchmark data (M3 MacBook Pro: Ghostty 0.7s cat 100K lines, ~2ms input; Alacritty 45MB 8-tab 4hr; Warp 380MB 14.2s throughput); project status (free beta, solo dev Crinter, Apache 2.0, Mac+Linux only, Windows coming soon); known limitations (no keyboard sidebar nav, agent cannot create tabs/panes, Neovim crash, iframe X-Frame-Options, no Cmd+ zoom)"
+    },
+    {
+        "notebook_id":  "044efa41-d601-4c4b-810c-21e51fa4fe42",
+        "sources":  "47",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "Freebuff: Ad-Supported AI Coding for the Modern Developer",
+        "covers":  "Ad-supported business model mechanics for AI coding tools (technographic targeting, server-side ad delivery, data flywheel, CPC/CPM monetization levers); developer adoption psychology (experiential value, satisfaction paradox — free users more satisfied than paid, \"free mentality\" conversion barrier, WTP threshold ~$15–$20/month); terminal/IDE ad delivery UX and trust (flow interruption, deceptive blending concern, privacy/code sovereignty, design principles — native API delivery, intent-driven insertion, clear disclosure, no \"demand through inconvenience\"); quality gaps free vs paid (model intelligence, agentic capabilities, context depth, latency throttling; hard caps on Copilot/Cursor/Cody/Blackbox); developer workarounds (\"Infinite Free\" rotation, BYOK, local models via Ollama, complementary tool pairing); competitive landscape (GitHub Copilot Free, Cursor Hobby, Windsurf, Amazon Q, Gemini Code Assist, open-source BYOK tools); Matthew Effect in AI coding (mainstream language bias, niche language AI productivity tax, reinforcing adoption loops); Freebuff strategic position (Value-Driven Alternative, counter-weight to freemium traps, stable free tier indefinitely)"
+    },
+    {
+        "notebook_id":  "464f316a-b59f-4af0-b608-e72637ccd780",
+        "sources":  "51",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "Multi-Platform AI Token and Usage Monitoring Widget Blueprint",
+        "covers":  "API endpoints for real-time token usage data (OpenAI `/v1/organizations/usage` + response `usage` object; Claude `anthropic-ratelimit-tokens-remaining` headers + `cache_creation/read_input_tokens`; Gemini `usageMetadata` + `x-ratelimit-remaining`); LLM observability tools (Helicone proxy one-line integration + ClickHouse/Kafka backend; Langfuse SDK tracing; LiteLLM Proxy unified gateway; Tokscale Rust-core local log parser; Bifrost Go gateway 11µs overhead; OpenLLM Monitor; LangSmith; Grafana Cloud; Galileo; W\u0026B); 5 architectural patterns (Proxy-Based, SDK/Decorator, Gateway Layer, Local Log Parsing, Webhook/Workflow); desktop widget implementation (event-driven headers for API users vs polling 30min for subscription users; local-first encrypted storage; system tray vs TUI overlay; Rust/Ratatui for performance, Flutter for UI-rich cross-platform, Python for CLI tools); cross-provider cost normalization (LiteLLM pricing tables, TPM vs RPM tracking, token-aware normalization); budget governance (4-tier hierarchy: Customer/Team/Virtual Key/Provider Config; 50/75/90% soft alerts before hard cap; anomaly detection; failover routing); local storage schema (Platforms/Tiers/Sessions/Keys tables; Hive or Isar for high-speed streaming; SHA-256 hashed key storage); API-key vs subscription user architecture (reset logic UTC midnight vs 5h rolling window for Claude Pro; tiktoken/Gemma local tokenization libraries); UI design (Bento Grid layout, progressive disclosure, Neumorphism for controls, Glassmorphism for modals)"
+    },
+    {
+        "notebook_id":  "5bd83f74-2374-4591-ad9c-ec5dcba5fa9f",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "Herdr: Persistent Terminal Multiplexing for AI Agent Workflows",
+        "covers":  "Herdr/CAO architecture (supervisor-worker tmux, CAO_TERMINAL_ID isolation, local HTTP coordination server localhost:9889); three MCP coordination primitives (handoff/synchronous, assign/asynchronous, send_message/ongoing); SQLite persistent agent memory with automatic context injection; session recovery (tmux reattach, `--remote` SSH flag for roaming, archive restore from `~/.cao/logs/terminal/`); Claude Code integration pattern (MCP server injection, `cao server` + `cao launch --agents`); cross-provider mixing (Claude Code supervisor + Amazon Q worker); HITL BLOCKER state and manual steering; comparison vs raw tmux / GNU Screen / zellij for AI workflows; current limitations (Unix-only, no built-in browser, VS Code/Ghostty split-pane incompatibility, experimental multi-agent status)"
+    },
+    {
+        "notebook_id":  "fd0bbb3c-60ca-4c2e-9749-65bb9c973196",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "Obsidian and Claude AI Personal Assistant Guide",
+        "covers":  "MCP integration architecture (client-server model, STDIO JSON-RPC, filesystem vs REST API bridges, tool definitions, CLAUDE.md governance); daily PKM workflows (LLM Wiki pattern, morning startup ritual with calendar aggregation, frictionless capture via Telegram/voice, raw→ingest→wiki cycle, session digests, memory hygiene cron jobs); Obsidian plugin ecosystem (Smart Connections RAG, Copilot compete/complement distinction, Dataview live dashboards, Templater structure enforcement, Local REST API backend); privacy and data security tradeoffs (cloud Claude sends queries and context to Anthropic; local MCP runs on STDIO; Ollama/LM Studio = 100% local with hardware costs and reasoning gap); practical use cases (literature reviews, hypothesis generation, meeting prep, language learning, investment portfolio tracking, decision simulation, accountability coaching, environment automation); failure modes (context rot 60% fact loss, goal drift, broken wikilinks from external rename, fix-break loops, token overhead from MCP manifests)"
+    },
+    {
+        "notebook_id":  "b959edb8-0b4a-4cca-9639-6b7184c9a3b9",
+        "sources":  "49",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "Context Engineering: The Evolution of AI Development",
+        "covers":  "Context engineering vs prompt engineering (paradigm shift, scope distinction, \"building the postal system\" vs \"writing a letter\"; 70% AI errors from poor context not poor models); context window management (sequential/parallel compaction, Slipstream validation, ACON 26–54% token reduction, LLMLingua 2–5× compression, MVC principle); tool use as context engineering (assertive cue fragility, 10× selection rate manipulation, 30-tool threshold, RAG over tool descriptions 3× accuracy, Plan-then-Execute P-t-E pattern, prompt injection resistance); prompt caching infrastructure (KV tensor reuse, layered-cake prompt structure, 90% cost reduction Anthropic/Google, 41–80% net savings, latency paradox for dynamic content, TTFT improvement 13–31%, cache-breaking anti-patterns: timestamps/dynamic MCP); GraphRAG vs vector RAG (multi-hop reasoning, entity resolution, temporal awareness, 54.2% accuracy improvement, hybrid production pattern 2026); multi-agent context architecture (supervisor-worker, message passing, shared blackboard patterns; 35-minute wall, 3.2× error amplification, semantic drift; mitigation: STORM local state consistency, intent annotations, Golden State handoffs)"
+    },
+    {
+        "notebook_id":  "9e3169b2-43a9-456e-9e1e-fc2eb206290f",
+        "sources":  "51",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "The TDD Mindset: Building Safe and Scalable Software",
+        "covers":  "TDD mindset as design discipline (behavior-before-code, executable specifications, feedback cycle); Red-Green-Refactor cycle (Red=define goal/design feedback, Green=simplest code, Refactor=emergent architecture via safety net); anti-patterns (test-after, coverage theatre, mock overuse, interdependent tests, testing private methods, 1:1 mapping fallacy); TDD + Clean/Hexagonal Architecture (DIP enforcement, ports as stable test points, decoupled functional core); TDD + Microservices (service isolation, contract testing, distributed chaos prevention); legacy codebase strategy (characterization tests, outside-in, Humble Object Pattern, extracting seams, incremental adoption); empirical evidence (40-90% defect reduction Microsoft/IBM; 15-35% upfront time cost; factor-of-10 debugging reduction; 2013 meta-analysis 27 studies); London vs Detroit schools (mockist fine-grained outside-in behavior verification vs classical coarse-grained inside-out state verification)"
+    },
+    {
+        "notebook_id":  "4b3a0619-cd5a-4d98-b59d-4f1e80ce6720",
+        "sources":  "48",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "The Selective Advantage of OpenAI Codex over Claude Code",
+        "covers":  "Codex vs Claude Code comparative analysis (Terminal-Bench 2.0 lead 82.7% vs 69.4%; SWE-bench Verified 88.7% vs 87.6%; SWE-bench Pro Claude lead 64.3% vs 58.6%); Codex architectural advantages (OS-kernel sandboxing Seatbelt/Landlock/seccomp; cloud-native parallelism up to 8 subagents GA March 2026; repo-centric memory vs session-centric; codex-1 task-specific fine-tuning; ~4x token efficiency); Claude Code failure modes (rate limiting on $20 Pro within 20-30 min; context rot after 10-15 tool calls; /compact recovers only ~26%; long-session constraint drift; Windows progressive rollout; looping behavior); Codex pricing model (Plus $20 rarely hits caps; Pro $200 practically unlimited; container fees $0.12-$1.92/task; API $5.00 input GPT-5.5; Codex-mini $0.25 for routine tasks); Skills and Automations system vs Claude Code Hooks (SKILL.md format; 90+ plugins April 2026; AGENTS.md open Linux Foundation standard vs CLAUDE.md proprietary; Standalone/Thread/Triage Automations; /goal command for multi-day scheduling); use case matrix (DevOps/IaC, untrusted code review, parallel task queues, greenfield prototyping, GitHub @codex integration, budget-constrained high-volume); hybrid workflow pattern ($40/mo both tools; Claude for architecture, Codex for execution)"
+    },
+    {
+        "notebook_id":  "be4ac92e-713f-4728-9ef0-b370857dcb90",
+        "sources":  "58",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-31",
+        "title":  "Zed: The Rust-Powered Future of Agentic Code Editors",
+        "covers":  "GPUI framework architecture (hybrid immediate/retained mode, Metal/DirectX/Vulkan, 120 FPS, no GC pauses, Entities/Views/Elements model, standalone crate Apache 2.0); performance benchmarks vs VS Code and Cursor (16× memory gap 222 MB vs 3,549 MB; 2 ms vs 22 ms input latency; 0.12–0.60s vs 1.29–4.5s startup; 80 ms vs 160 ms AI autocomplete P50); Agent Client Protocol (ACP — open standard Apache 2.0 JSON-RPC 2.0; LSP analogy for AI agents; 20+ ecosystem tools including Claude Agent, Gemini CLI, OpenAI Codex, Kiro, OpenCode, Goose, Grok Build; JetBrains adopted Oct 2025; VS Code client extension; Cursor joined ACP registry; ACP Registry; parallel multi-agent on isolated Git worktrees; GUI diff review for CLI agents); inline AI features (Zeta2 edit prediction model open-weight, tab-completable suggestions; Inline Assistant prompt-driven rewrite; Agent Panel with MCP extension; multi-model support Claude/GPT-4o/o1/Ollama); real-time collaboration (CRDT-based sub-100ms; Follow Mode; built-in audio/video via LiveKit; Zed Channels persistent rooms; shared terminals; remote-collab over SSH; vs VS Code Live Share bolt-on); Tree-sitter integration (incremental AST parsing, syntax-aware editing, highlights.scm S-expression queries, WebAssembly extension sandbox wasm32-wasip1); cross-platform status (macOS primary; Linux production Ubuntu/Debian/Fedora/Nix Vulkan; Windows stable late 2025 DirectX 11 — no remote server host, CJK IME broken, ~1,000 extensions vs 100K+ VS Code, no Jupyter); remote development (SSH ControlMaster; UI local + code/LSP/debugger remote; remote-aware breakpoint sync); pricing 2026 (Personal free 2K predictions/BYO API keys unlimited; Pro $10/mo unlimited predictions + $5 token credit; Business $30/seat org policies; Student free 1yr; revenue: AI token markup 10%, future private Channels, enterprise admin)"
+    },
+    {
+        "notebook_id":  "0a7ab808-4e1d-4472-be2d-9396a85011b8",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-30",
+        "title":  "The Hermes Agent Evolution: Integrating Qwen3.7-Max Power",
+        "covers":  "Hermes Agent architecture (SOUL.md / 3-tier memory / SKILL.md / Curator / GEPA); Hermes vs LangChain vs CrewAI design philosophy; Qwen3 hybrid thinking mode (4-stage training, Thinking Budget Mechanism, 38K token cap); Qwen3-Max-Thinking benchmarks (AIME25/HMMT 100%, HLE 58.3, GPQA Diamond 92.8); BM25 progressive tool disclosure (Tool Search — 49%→74% accuracy); MCP integration patterns; multi-step automation via SagaLLM transactional guarantees; production deployment (6 execution backends, Modal/Daytona hibernation); cost trade-offs ($1.20/1M, 10–12x vs GPT-5, MoE 3B/80B activation); incident response metrics (55–75% auto-resolution, MTTR -20–40%)"
+    },
+    {
+        "notebook_id":  "bfa6154c-9349-4800-8331-ece7af764a14",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29 (SUPPLEMENT — original 2026-05-13)",
+        "title":  "DevOps / Hosting",
+        "covers":  "Oracle Cloud A1 (4 OCPU/24 GB RAM always-free, ARM, idle reclamation: 7-day window, all 3 metrics \u003c20%), Fly.io (~$4–6/mo), Railway ($5/mo Hobby), Render ($7/mo — sleep on free tier), Koyeb ($2.68/mo eco-micro), Northflank ($2.70/mo). SUPPLEMENT additions: Oracle PAYG upgrade — disables reclamation policy (TOS-compliant, zero cost within Always Free limits, ~$100 verification hold reversed immediately); stress-ng workaround vs PAYG comparison (TOS risk table); Fly.io 2025 auto_stop config — `auto_stop_machines = \"off\"` (string not bool), trial 5-min stop, HA duplicate bot responses (fix: `fly scale count 1`), restart policy gap per deploy."
+    },
+    {
+        "notebook_id":  "a28b75b6-dffb-4841-afa9-a5183f538f58",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "Claude Code Business Automation",
+        "covers":  "6 business system categories (marketing attribution/content automation/CRM+knowledge systems/BI+reporting/SDLC automation/workflow orchestration), Four-Phase development cycle (Explore/Plan/Implement/Commit), 3-Brief System (brand.md/cross.md/prd.md), Five core design principles (Simplicity/Transparency/Verification Loop/Context Management/ACI), complex system strategies (Orchestrator-Worker, Contextual Retrieval, hybrid n8n+Claude), cost management (prompt caching/Batch API/token counting), real-world benchmark (18 systems in 2 months solo), Claude Code vs traditional development comparison"
+    },
+    {
+        "notebook_id":  "",
+        "sources":  "",
+        "tier":  "Cross-synthesis (no notebook ID — derived from existing Knowledge files)",
+        "extracted":  "2026-05-29",
+        "title":  "Cross-Synthesis: Persistent Process Resilience (2026-05-29)",
+        "covers":  "H1 CONFIRMED (silent state invalidation — detection vs classification failure sub-types); H2 CONFIRMED (hidden persistence tax economic structure — nominal-zero infrastructure on unstable surfaces); H3 CONFIRMED + extended (externalise volatile state, instrument for detection, graceful restart, content validation after apparent success — fourth pillar); 8-row cross-domain connection map; 3 novel connections absent from all 5 input files"
+    },
+    {
+        "notebook_id":  "ad99a35f-0028-457a-94b3-7e173c7cca29",
+        "sources":  "41",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "Knowledge Management and Obsidian",
+        "covers":  "PARA vault structure for devs (Projects/Areas/Resources/Archives + `decisions/` + `templates/` + `Inbox/`), MOC/Structure Notes pattern, namespace convention for large vaults. Plugin stack: Dataview (DQL queries, dashboard, ADR log tables), Templater (ADR/devlog/retro templates with dynamic vars), Obsidian Git (auto-commit 60min, SSH keys, multi-machine sync), Kanban, Tasks, Periodic Notes, Canvas (JSON Canvas), Local REST API with MCP. ADR templates: Michael Nygard format (Context/Decision/Consequences), frontmatter status lifecycle (Proposed→Accepted→Implemented→Deprecated), Dataview live ADR tables, naming `0001-use-postgresql.md`. Architecture diagrams: Canvas for spatial maps, Mermaid (built-in) for version-controlled flowcharts/sequence diagrams/ERDs, C4 model views. AI integration: Local REST API with MCP plugin (`http://127.0.0.1:27123/mcp/`), Claude Code `claude mcp add`, CRUD on notes, surgical heading patching, JsonLogic metadata queries, `vault_get_document_map`. CLAUDE.md in project root = architecture context. Compound knowledge: atomic notes (\u003c500 words one concept), link context explaining WHY, MOC hub notes, ghost links as placeholders, maturity tags (seedling/budding/evergreen), daily notes as capture zone → periodic distillation, orphan detection via Dataview, archive completed projects."
+    },
+    {
+        "notebook_id":  "8d55762b-0967-4856-9c27-0c6b813de05d",
+        "sources":  "49",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "UI Design and Icon Systems",
+        "covers":  "Lucide design philosophy (community fork of Feather Icons, 1,700+ icons, strict 24x24 grid + 2px stroke, brand logos excluded), framework integration (official packages: React/Vue/Svelte/Angular/Solid/Preact/Astro/React Native — all TypeScript-typed), tree-shaking architecture (named imports, zero bundle cost for unused icons, dynamic import support), competitive comparison table (Lucide vs Heroicons vs Phosphor vs Tabler vs Radix Icons — icon count/grid/style/customization/frameworks/license), SVG accessibility patterns (aria-hidden for decorative vs aria-label on parent button for functional; sr-only text alternative; keyboard navigation via button/a wrappers), design tokens (DTFM format, semantic aliases with {token.reference} syntax, CSS custom properties for dark mode), global config (LucideProvider React / LucideAngularConfig / Svelte context injection), shadcn/ui integration (data-icon attributes for button padding), Style Dictionary for cross-platform token output"
+    },
+    {
+        "notebook_id":  "6e41de15-bd12-41ff-aead-3a0f2ae2c339",
+        "sources":  "46",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "Voice Cloning and Speech Synthesis",
+        "covers":  "LuxTTS architecture (distilled ZipVoice 4-step, custom Vocos 48kHz vocoder, 1GB VRAM, 150x real-time), voice cloning pipeline (3s reference audio, acoustic model conditioning, speaker embedding), model comparison table (LuxTTS/Kokoro/StyleTTS2/XTTS v2/Bark/OpenVoice v2 — quality/speed/best-for), production deployment (inference optimization: float16/ONNX/non-autoregressive; hardware selection: ≤1GB/8-12GB/CPU/Apple Silicon; batching: ESPnet/PagedAttention; latency: streaming XTTS \u003c200ms/OT-CFM Matcha-TTS), evaluation metrics (MOS/RTF/WER/CER/PESQ/STOI/SISDR), benchmarks (LJSpeech: StyleTTS2 surpasses human; VCTK: VALL-E 2 human parity), distillation-as-speed-lever pattern (analogous to DistilBERT)"
+    },
+    {
+        "notebook_id":  "3a4555f4-ddcc-4c44-b755-e5e0cf2da951",
+        "sources":  "46",
+        "tier":  "Lean Q\u0026A (3/5 questions answered; Q4–Q5 synthesized from source material)",
+        "extracted":  "2026-05-29",
+        "title":  "Developer Tools and Terminal Mastery",
+        "covers":  "Essential CLI toolkit layers (terminal emulator/shell/navigation/file inspection/workflow tools), CLI vs TUI paradigm distinction (when to choose each, composability vs visual dashboard), terminal multiplexers (tmux vs Zellij — C/Rust, minimalist vs batteries-included, tmate collaboration, Wasm plugins), TUI frameworks (Bubble Tea Go Elm Architecture, Textual Python CSS-reactive, Charm ecosystem), shell environments (Fish/Nushell typed pipelines/Zsh+Starship), terminal emulators (Alacritty/WezTerm/Ghostty/Windows Terminal), editors (Neovim Lua+LSP, Helix tree-sitter built-in), dotfiles as productivity multiplier, Rust as dominant language for modern CLI/TUI tools, Windows viability (Terminal+PowerShell7+WSL2)"
+    },
+    {
+        "notebook_id":  "f83096ef-db8b-4d60-9c5c-2c707ae39a5a",
+        "sources":  "80",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "The Harness Engineering Framework",
+        "covers":  "Harness definition (ETCSLV tuple vs. simple pipeline), core components (execution loop, tool registry, context manager, state store, lifecycle hooks, evaluation interface), routing strategies (difficulty-aware: RADAR/IRT, HyDRA multi-dimensional, DAAO/VAE; RL-based: Router-R1, MoE; abstention: semantic entropy, conformal prediction, RouteNLP; semantic/intent routing), quality gates (3-layer: deterministic pre-emission → semantic LLM-judge → risk-context policy; RAG Triad; 5-dimension metrics; cognitive dissonance delta; dynamic thresholds; conformal risk control), token budget management (per-agent explicit constraints, multi-tier hierarchies, Pareto frontier MOO, CPT/hypervolume metrics, context rot mitigation, BudgetThinker control tokens, single-agent baseline principle), failure modes (cascade failure/component poisoning, cascading hallucination, silent context poisoning, timeout accumulation, agent abstention, recursion limit failures, execution runaway, context rot), recovery patterns (circuit breaker 3-state, HARNESS_ESCALATE hierarchy, cascading fallback tiering, bulkheads, replanning loops, LangGraph interrupt()), production case studies (LangGraph, AWS patterns, HyDRA, RADAR, FrugalGPT, BudgetThinker/TALE), production design checklist"
+    },
+    {
+        "notebook_id":  "d94b64ec-cb75-44e5-9eb4-413030073f3a",
+        "sources":  "8",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "NotebookLM add-research Deduplication Behavior",
+        "covers":  "`add-research` does NOT deduplicate across sessions (H1 confirmed); no dedup flags on `add-research` — `--import-all` auto-imports but does not filter (H2 partially confirmed); server does NOT enforce dedup natively — client handles idempotency only on error recovery, not proactively (H3 confirmed); idempotency hardening = probe-then-retry on network failure only (not cross-session dedup); `source clean` command = primary dedup tool (flags: --dry-run, -y/--yes, --json, -n, --all/--latest/--earliest); pasted text sources are explicitly non-idempotent (no server-side dedup key); recommended workflow: add-research → source clean --dry-run → source clean --yes; 50-source limit makes clean essential"
+    },
+    {
+        "notebook_id":  "7610fd65-b7f8-4794-98b8-0cb0b9433152",
+        "sources":  "7",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "NotebookLM source add URL Acceptance Conditions",
+        "covers":  "H1 NOT CONFIRMED — no evidence tracking params (utm_*, fbclid, ref=) cause rejection; ?si= YouTube case (C-017) is YouTube-specific, not general param rule; H2 CANNOT CONFIRM — URL shortener/redirect behavior undocumented; H3 CONFIRMED — no domain allowlist, rejection is content-based (attempt-to-fetch model); X.com accepted but silently misparsed (returns error page as content); paywalled/login-required = failed-to-load after attempt; HTML/XHTML file upload = hard rejection; JS-dependent sites = crawl failure; files \u003e20MB = upload timeout; .txt/.md files intermittent \"return None\" bug; workarounds: pre-fetch to Markdown, manual extraction, pandoc/lynx, add_text API; Mint pipeline implications: strip ?si= from YouTube (C-017), avoid X.com, pre-screen paywall domains, use source clean for error-state detection"
+    },
+    {
+        "notebook_id":  "60e27d5c-0d28-48d4-890c-bb66867d86cf",
+        "sources":  "29",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "notebooklm-py vs Official NotebookLM API",
+        "covers":  "H1 CONFIRMED — Google has no official public API for consumer NotebookLM; notebooklm-py reverse-engineers batchexecute RPC protocol (same protocol used by web frontend); 6-character obfuscated method IDs, triple-nested JSON arrays, browser cookie + CSRF token auth; Enterprise API exists since 2026 but requires Google Cloud + enterprise license; H2 CONFIRMED — undocumented endpoints have no stability guarantees; silent RPC ID rotation is primary failure mode; schema drift (positional JSON arrays) secondary; nightly GitHub Action (rpc-health.yml) monitors 35+ RPC methods, auto-creates `rpc-breakage` issues; `NOTEBOOKLM_RPC_OVERRIDES` env var for self-patching; exponential backoff built-in; H3 CONFIRMED — documentation lag is asymmetrical: notebooklm-py documents hidden features (batch downloads, mind map JSON, source fulltext) that Google never published; rpc-reference.md archives legacy/experimental IDs; Enterprise API = REST surface (licensed orgs only); pipeline implications: wrap ask in try/catch for UnknownRPCMethodError, use NOTEBOOKLM_RPC_OVERRIDES for immediate recovery, C-005 covers cookie expiry, one client per event loop (not thread-safe)"
+    },
+    {
+        "notebook_id":  "49b3b8d8-18af-4eba-8b04-42f25bffad98",
+        "sources":  "41",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "One Day with My AI Team — ลงทุน Diary Channel",
+        "covers":  "Complete named AI team roster (PR/Newby/Indy/Ribby/Minnie/P\u0027Rees/P\u0027Chris/Vera/P\u0027Devil); Atoms extraction methodology (2-year shelf-life filter for durable knowledge units); parallel Quality Gate (Critic + Fact-Checker + Devil\u0027s Advocate); intentional Gemini vs Claude model diversity for adversarial critique; non-coder AI team toolstack (Claude + Gemini + NotebookLM + Obsidian + Discord remote control); investment portfolio dashboard from PDF statements; Ribby = Haiku cost-optimization pattern; morning 8AM news triage workflow; Obsidian Sync to mobile"
+    },
+    {
+        "notebook_id":  "1e570077-931b-4c76-9194-c8e2193a9e61",
+        "sources":  "46",
+        "tier":  "Lean Q\u0026A (synthesized from source list + summary; ask rate-limited — C-012 protocol)",
+        "extracted":  "2026-05-29",
+        "title":  "The Harness Engineering Framework Vol.2: Academic Foundations",
+        "covers":  "Academic/theoretical foundations of ETCSLV harness model — CoALA cognitive architecture (4 memory types → ETCSLV mapping), LLM-Modulo planning limit (generator/verifier separation, PSPACE complexity, external verifier requirement), RouteLLM routing theory (preference-based threshold calibration, conformal prediction guarantees, Pareto frontier formalization), \"More Agents\" scaling law (log-linear sample scaling, diminishing returns \u003e20 agents, aggregation function sensitivity), self-improvement convergence conditions (ReST+ReAct trajectory training, FireAct diverse trace requirement, convergence failure via homogeneous feedback), MoE learned gating theory (routing as learnable function, top-K sparse routing, cost-quality Pareto), survey foundations (autonomous agent design space, perception-action-memory trichotomy, reactive vs deliberative agents), academic-to-practice bridge table mapping each framework to ETCSLV component and production gate"
+    },
+    {
+        "notebook_id":  "b28ef00a-ee06-461b-8baf-c6b9b976a6da",
+        "sources":  "30",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-29",
+        "title":  "Facebook → NotebookLM: Source Import Methods",
+        "covers":  "NotebookLM does not accept direct Facebook URLs; Post text → copy-paste to .txt/.md (best accuracy); Reel Pipeline A: yt-dlp → .mp3 → upload; Reel Pipeline B: yt-dlp + Whisper → .txt → upload (recommended); vtte tool (automates B); Browser extensions: \"NotebookLM Tools\" right-click import, \"Get cookies.txt LOCALLY\", Video DownloadHelper; No-code: Apify + Make.com for Group bulk scraping; yt-dlp auth: --cookies-from-browser, --impersonate chrome-99 for 403 bypass; Failure cases: HTTP 403 fingerprinting, 429 rate limit, cookie DB lock, Reel metadata missing, no live stream support; Creative workarounds: Facebook data archive download, Messenger HTML history, community bulk Reel scripts"
+    },
+    {
+        "notebook_id":  "da0fd26e-2759-49e1-9f0d-b453fbe62f59",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-28",
+        "title":  "Scientometrics: Co-citation Analysis \u0026 Research Front Detection",
+        "covers":  "Co-citation analysis mechanics (intellectual base vs research front distinction), VOSviewer vs CiteSpace II (VOS similarity mapping vs longitudinal burst detection), quantitative thresholds (top 1/10/20% citation frequency; minimum link strength; resolution parameter; FWCI normalization), open-access infrastructure without Scopus/WoS (OpenAlex 200M+ works, Crossref+I4OC, Semantic Scholar, Europe PMC), manual proxy methods (term co-occurrence NLP, reference manager RIS export, thesaurus files), historical foundations (Garfield, Price, Small)"
+    },
+    {
+        "notebook_id":  "c618806b-e4ff-4f4b-a97b-7ad3f17acc18",
+        "sources":  "50",
+        "tier":  "Quality",
+        "extracted":  "2026-05-28",
+        "title":  "Gemini CLI 101 — Commands, Rate Limits, Error Taxonomy, and Agent Operational Patterns",
+        "covers":  "Install (npm 20+, Homebrew, npx), auth (Google OAuth, API key, Vertex AI ADC), all slash commands (/model /compress /context /memory /init /rewind /restore /tools /mcp /vim), CLI flags (--prompt/-p, --output-format text/json/stream-json, --approval-mode default/auto_edit/plan/yolo, --sandbox, --allowed-tools), rate limits (2026 free: 5 RPM/100 RPD Gemini 2.5 Pro — cut Dec 2025; midnight PT reset; per-project not per-key), complete error taxonomy (HTTP 429/400/401/403/500/503/504 + CLI exit codes 41 auth/42 input/44 sandbox/53 turn-limit), programmatic use patterns (GEMINI_API_KEY/GEMINI_CLI_TRUST_WORKSPACE, exponential backoff with jitter, tool name normalization underscore→hyphen, stream-json stateful assembler), PRODUCT TRANSITION: Gemini CLI retired for free users June 18 2026 → Antigravity CLI"
+    },
+    {
+        "notebook_id":  "ffc81aa2-b9a8-4017-b7b8-8bab6b92f5cc",
+        "sources":  "50",
+        "tier":  "Quality",
+        "extracted":  "2026-05-28",
+        "title":  "NotebookLM 101 — Features, Quotas, API Access, and Agent Integration Patterns",
+        "covers":  "All source types (PDF/DOCX/PPTX/TXT/MD/ePub/Google Docs/Slides/Sheets/YouTube/audio/images/Gemini Chats), all artifact types (Audio Overview, Video Overview, Mind Map, Infographic, Quiz, Flashcards, Study Guide, Briefing Doc, Data Table, Slide Deck, Report), quota tiers (Free 50 sources/10 reports/day/50 queries; Plus 100/more; Pro 300/500 queries; Enterprise 300-600), rolling 24-hour reset window (not midnight), official Enterprise API (IAM `Cloud NotebookLM User`), notebooklm-py CLI tool (community, cookie auth, not in official docs), C-011 (add-research --import-all unreliable — use source add explicitly), C-012 (clear before ask), C-014 (wait 5min after clear), HITL Generate-Review-Publish pattern, Custom AI Personas"
+    },
+    {
+        "notebook_id":  "ff5780c4-c0e5-40b8-af6e-920ec05bfc12",
+        "sources":  "23",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-28",
+        "title":  "Research Front Mapping: Cross-Notebook Synthesis Methods",
+        "covers":  "Cross-document synthesis methods (concept mapping, affinity diagramming, meta-synthesis, scoping review, grounded theory constant-comparative, cross-impact analysis, ACH, linchpin analysis, bibliographic coupling), intelligence analyst frameworks under uncertainty (ACH matrix across all hypotheses, source reliability vs credibility split, peer reclamas, mirror-imaging avoidance), failure modes (confirmation bias/biased assimilation, false connections/illusory correlations, missing bridges/file-drawer effect, rater drift, ambiguity aversion), quality evaluation without ground truth (audit trail, sensitivity analysis, Grounded Theory fit+workability, inter-rater Cohen\u0027s Kappa, plausibility over accuracy), practical framework for Mint\u0027s cross-notebook synthesis (scoping review first → affinity diagramming → ACH for contradictions → negative case audit → plausibility+audit validation)"
+    },
+    {
+        "notebook_id":  "710f87bd-5e70-4d0f-ac5e-072cbbafbc9c",
+        "sources":  "23",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-28",
+        "title":  "Knowledge Object Design: Inverted Pyramid \u0026 Context-Adaptive Synthesis",
+        "covers":  "Inverted pyramid / BLUF mechanics (79% F-pattern scan, 124% usability improvement, when detail-first wins), structural variation by topic type (fast-moving vs stable, conceptual vs implementation, narrow vs broad), DITA topic taxonomy (Concept/Task/Reference types with selection table), structural failure signals vs content gap signals (wall-of-text, burying-the-lead, information scent — 6 structural signals + detection methods), summary-first vs detail-first decision framework (active solution-hunting vs passive deep learning), 6-month lifecycle test for Knowledge restructuring"
+    },
+    {
+        "notebook_id":  "8c203ca6-80da-4a64-a3bc-7",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "Multi-Agent Orchestration",
+        "covers":  "4 coordination topologies (centralized/decentralized/hierarchical/dynamic), functional patterns (fan-out/pipeline/debate/swarm), Shared Blackboard, VMAO, VFA+Audit Agents, 6 scaling decisions for 10+ agents, LangGraph/CrewAI/AutoGen/Hermes comparison, eBPF boundary tracing, Provenance Log + Agent Cards"
+    },
+    {
+        "notebook_id":  "79a71497-f92d-492f-984a-0",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "Workflow Automation and CI/CD",
+        "covers":  "GitHub board→autonomous pipeline (Builder/Tester/Reviewer agents), 6-step setup, ticket linting as critical quality gate, limits (v3 rebuild ceiling/no exit condition failure mode), comparison vs /loop//schedule/hooks (Superboard = general contractor built on top of primitives)"
+    },
+    {
+        "notebook_id":  "3297b297-59bb-426c-9ee0-7b0436086779",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "Context and Memory Engineering",
+        "covers":  "3-tier hierarchy (working/archival/long-term), 7 retrieval mechanisms (semantic/FTS5/SQL/graph/H-MEM/weighted/progressive disclosure), MemGPT vs CLAUDE.md vs Harness comparison, Memory Trilemma (80%→40% accuracy dip on switching to retrieval-based)"
+    },
+    {
+        "notebook_id":  "abe11297-a4f1-4bf5-9082-47d153131991",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A (5 questions, full answers)",
+        "extracted":  "2026-05-27",
+        "title":  "Gemini CLI Mechanics",
+        "covers":  "G-01 Rate limits (OAuth: 60 RPM/1000 RPD shared pool; API key: Flash-Lite 30/1500, Flash 15/1500, Pro 5/50); G-02 Google Search quota amplification (each grounding query = separate RPD hit; 5–10x amplification in practice; observe via /stats tools or --output-format stream-json); G-03 utility_router (background Flash-Lite model for prompt classification; --model does NOT bypass it; Flash quota exhaustion blocks entire session even with Pro quota remaining — documented as critical routing flaw Issue #27411); G-04 --skip-trust (required for headless pipelines; CVSS 10.0 GHSA-wpqr-6v78-jr5g for use on untrusted external PRs; omission causes FatalUntrustedWorkspaceError; env var alternative: GEMINI_CLI_TRUST_WORKSPACE=true); G-05 --output-format json schema ({response: str|null, stats: {session/model/tools/user}, error: {type/message/code}}; triple-backtick parsing bug Issue #11184; stats undercounts due to utility model leakage); G-06 version v0.43.0 current; transitioning to Antigravity CLI; Intelligent Model Routing marked experimental"
+    },
+    {
+        "notebook_id":  "2a2c6b3e-018e-41c3-b2a9-a45b5fca8222",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "Self-Improving AI Agents",
+        "covers":  "5 self-improvement mechanisms (skill creation/patching/memory nudge/Honcho/FTS5 episodic), HITL points that remain required, Tirith security + container isolation safety, 35 known vulnerabilities at v0.13, OpenClaw vs Hermes comparison"
+    },
+    {
+        "notebook_id":  "29d8977e-efd7-49be-99e0-5",
+        "sources":  "51",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "Token Efficiency and Knowledge Graphs",
+        "covers":  "200x token efficiency claim (45K→200 tokens for structural queries), tree-sitter AST + SQLite pipeline, MCP server + PreToolUse hooks integration, Linux kernel stress test (28M lines, 2.1M nodes), KG vs VDB comparison"
+    },
+    {
+        "notebook_id":  "a989e5f8-c060-405c-b574-21b11e80441a",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "AI Migration and Framework Selection",
+        "covers":  "4-phase methodology + 6 evaluation dimensions, 3 market layers (frameworks/platforms/providers), use case recommendations table (LangGraph/CrewAI/Claude Code/Botpress/N8N), TCO 5 buckets (inference costs dominate), vendor lock-in prevention (abstraction layers/open standards/exit strategy), 90-day pilot playbook, 5 common selection mistakes"
+    },
+    {
+        "notebook_id":  "39e6bae0-150b-4d99-9cd8-e6adc35e46b0",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "2026-05-27",
+        "title":  "Source Discovery Alternatives: Search APIs for AI Research Pipelines",
+        "covers":  "G-10 (Gemini CLI replacement for source discovery) — Free tier quotas: Tavily 1k/month, Brave 1k/month via $5 credit, Serper 2,500 one-time, Google CSE 100/day but closed to new users. JSON schemas: Tavily `results.url`+`results.content`, Serper `organic.link`+`organic.snippet`, Brave `results.url`+`results.description`. Neural vs keyword: Exa.ai 81% WebWalker accuracy vs Tavily 71%; AI-native APIs \u003e90% SimpleQA vs raw Google SERP 38%. Recommended combination: Tavily (primary free) + Serper (overflow) = zero tool-call amplification. `add-research` insufficient as standalone for technical topics."
+    },
+    {
+        "notebook_id":  "131fe915-a404-4bc4-9df7-b6ef86e39a9c",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "2026-05-27",
+        "title":  "Gemini CLI: Quota Monitoring, Error Taxonomy, and Cross-Product Quota Sharing",
+        "covers":  "G-07 (programmatic quota monitoring via Service Usage API + Cloud Monitoring API, /stats CLI flag, HTTP headers Retry-After/x-ratelimit-*), G-08 (TerminalQuotaError vs RetryableQuotaError taxonomy — RPM/TPM/IPM retryable; RPD/billing terminal; recovery matrix; retryDelayMs as discriminator), G-09 (quota scoped per project not per key; CLI+AI Studio share same pool if same project; Vertex AI = completely separate system; free tier comparison)"
+    },
+    {
+        "notebook_id":  "61dec51f-611c-49e1-9a09-59bb871f6f0e",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "2026-05-27",
+        "title":  "Research Quality Frameworks: ACH, Theoretical Saturation, Knowledge Object Design, and Research Front Mapping",
+        "covers":  "ACH method (Heuer 1999 / CIA Tradecraft Primer 2009 — 8-step process, disconfirmation logic, hypothesis matrix, diagnosticity filtering, sensitivity analysis; PARC ACH0 technical description; Pherson Associates empirical study); Theoretical Saturation (Glaser \u0026 Strauss 1967 — theoretical vs data saturation distinction; Saunders et al. 2018 — code/meaning/theoretical saturation types; Hennink \u0026 Kaiser 2022 — code saturation at 9-17 interviews, meaning saturation at 16-24; Francis et al. 2010 \"3 consecutive interviews\" stopping rule; Guest/Bunce/Johnson 2006 — 80% themes by interview 6, 90% by interview 12); Knowledge Object Design (DITA concept/task/reference typing; inverted pyramid journalism logic; adaptive structure by report type); Research Front Mapping (co-citation analysis; CiteSpace II; VOSviewer; manual proxy via cross-notebook source overlap tagging); Integrated 4-phase research quality checklist"
+    },
+    {
+        "notebook_id":  "7b7f1013-3bad-4bc0-949d-63a1bfc15a92",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "2026-05-27",
+        "title":  "Source Evaluation Methods: SIFT, Lateral Reading, and Information Half-Life",
+        "covers":  "SIFT method (Caulfield 2019 — Stop/Investigate/Find/Trace; actions vs CRAAP criteria; cognitive load reduction); Lateral reading (Wineburg \u0026 McGrew 2018 — fact-checkers vs historians/students; ILSI case study; critical ignoring; empirical: 6x increase in fact-checking after 7 hours instruction); Information half-life (Burton \u0026 Kebler 1960; Fritz Machlup 1962; discipline-specific decay rates — Medicine/Engineering fast, Humanities slow; LangGraph docs ~3-12mo, PDPA ~3-7yr, ML benchmarks ~3-6mo); Source quality rubric for AI pipelines (programmatic signals: date/domain age/HTTPS/Wikipedia presence; judgment signals: funding conflicts/off-topic authority/vendor bias); 4-tier accept/reject framework for Mint source evaluation"
+    },
+    {
+        "notebook_id":  "11397b16-3047-422a-9a6e-faaece620ea2",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "Future of Work and AI Economics",
+        "covers":  "Hourglass org structure (10-20% mid-level reduction), 5 risk categories (reporting-heavy/intermediaries/entry-level/pseudo-work/I-shaped specialists), T-shaped leadership appreciation, NVIDIA $5M/Cursor $13M revenue-per-employee benchmarks, The Validation Tax for developers (execution→validation shift), Context Gap bottleneck"
+    },
+    {
+        "notebook_id":  "9abf76fb-8622-4e67-b970-d",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-27",
+        "title":  "AI Engineering Career",
+        "covers":  "6-stage 8-18 month curriculum, critical vs skippable per stage, product engineering vs research framing, 5-project portfolio sequence (RAG/extraction/agent/eval/deploy), DECISIONS.md signaling, common mistakes (notebook-to-production fallacy/vibe testing), advancement readiness signals"
+    },
+    {
+        "notebook_id":  "a1990fa3-6dc2-4fa2-a847-78df1ff58916",
+        "sources":  "40",
+        "tier":  "Lean+fallback (pipeline v2 test)",
+        "extracted":  "2026-05-26",
+        "title":  "Agent-First IDEs and Parallel Tools",
+        "covers":  "Six parallel agent management UIs (Claude Code Desktop/Nimbalyst/Superset/Agent Orchestrator/dmux/Cursor 2.0), Windows-native free/OSS tools comparison table (OpenCode MIT 160K+ stars / Nimbalyst MIT / Agent Orchestrator MIT), Claude API integration categories (CLI orchestrators wrapping `claude` binary / direct API / multi-model), community tmux+Git Worktrees architecture (Split-and-Merge/Hierarchical/A/B Agent Pairs patterns, emergent tools dmux/ccmanager/Tmux-Orchestrator), agy CLI standalone confirmation (Claude Sonnet 4.6 + Opus 4.6 support, ANTIGRAVITY_API_KEY migration, separate quota pools), production readiness ranking for Windows+Claude (OpenCode \u003e Nimbalyst \u003e Agent Orchestrator)"
+    },
+    {
+        "notebook_id":  "a498305d-2b5f-43c4-b718-cdad6419267b",
+        "sources":  "2",
+        "tier":  "Lean Q\u0026A (2 questions, combined topics)",
+        "extracted":  "2026-05-24",
+        "title":  "Obsidian AI Memory",
+        "covers":  "OpenClaw as local \"Personal OS\" (Mac/Windows/Linux/RPi, chat interfaces WhatsApp/Telegram/Discord), Obsidian Vault Skill (ClawHub → read/write filesystem access), 5-step setup (install skill → vault path + permissions → SOUL.md memory rules → HEARTBEAT.md daily routine → test with real conversation), SOUL.md memory architecture (what to save: meeting notes/research/people/decisions; what NOT to save: small talk/greetings/short factual questions/tasks already in task manager), HEARTBEAT.md proactive routines (nightly 21:00 review: what was discussed/what to capture/what to update/follow-up items), natural language retrieval vs keyword search, OpenClaw vs Semantic Notes Vault MCP comparison (proactive curation vs reactive retrieval; agentic writing vs search layer; HEARTBEAT routines vs on-demand), security note (curl-pipe installer = BLOCK; use npm i -g openclaw)"
+    },
+    {
+        "notebook_id":  "59e17132-792d-4b5d-9239-dedca5456704",
+        "sources":  "9",
+        "tier":  "Lean Q\u0026A (3 questions)",
+        "extracted":  "2026-05-24",
+        "title":  "Formal Verification",
+        "covers":  "Plan verification via model checking (Kripke structures + LTL + Bounded Model Checking + NuSMV), NSVIF neuro-symbolic CSP framework (Z3 SMT solver, logic vs semantic constraints, Python checker generation), contextual security formalization (4 properties: task/action/source/data alignment, oracle functions), constraint-based guardrails (R2-Guard/GuardAgent/AgentSpec), architectural privilege separation (SecGPT/IsolateGPT sandboxing), weak-to-strong generalization, LLM-to-verify-LLM paradox, semantic subjectivity limit, syntactic vs semantic accuracy gap, causal attribution problem, TOCTOU/dynamic complexity, model capability bottleneck (GPT-4o-mini performs worse with neuro-symbolic), 160x token cost of NSVIF vs judge baseline, supervision gap for superhuman models, reliable vs unreliable verification table (logic constraints/plan syntax/data isolation = reliable; semantic/intent/attribution/superhuman = not reliable)"
+    },
+    {
+        "notebook_id":  "faab43f1",
+        "sources":  "21",
+        "tier":  "Lean Q\u0026A (5 questions)",
+        "extracted":  "2026-05-24",
+        "title":  "AI Coding Agent Skills and Workflows",
+        "covers":  "SKILL.md context injection mechanism (6 intensity levels: lite/full/ultra + wenyan variants), Auto-Clarity override for destructive operations, installation methods (Method 2 safe / Methods 1/3/4 blocked by security gate), token reduction evidence (65% output-only → 4-10% total session), side effects (Ultra level ambiguity risk, not suitable for architecture discussions or pedagogy), Pordee compatibility (sequential use only — Caveman for English, Pordee for Thai), security assessment (iex/node installer BLOCKED, manual SKILL.md SAFE)"
+    },
+    {
+        "notebook_id":  "e766b365-67d3-4f23-9707-579a45f1ad1e",
+        "sources":  "20",
+        "tier":  "Lean (Q\u0026A rate-limited; synthesized from summary + source fulltext)",
+        "extracted":  "2026-05-24",
+        "title":  "Workflow Automation and AI Pipelines",
+        "covers":  "n8n vs Zapier vs Make positioning table (developer-first / self-hosted / higher cost ceiling), n8n 2.0 LangChain agent architecture (AI Agent node + LangChain nodes + Tool nodes + Memory nodes, ReAct-style loop), MCP server integration with Claude Code (two layers: workflow execution + workflow creation/editing from prompt, April 2026), native MCP server (search/get/execute_workflow tools), czlonkowski/n8n-mcp + n8n-skills community extension, Cloud vs self-hosted MCP capability gap, five workflow patterns (trigger→agent→action / sub-workflow as agent tool / memory-augmented agents / HITL pause / self-hosted Ollama local LLMs), production deployment practices (Queue Mode / error workflows / token cost control / idempotency / sub-workflow isolation), prompt injection risk via MCP tool responses (arXiv security paper)"
+    },
+    {
+        "notebook_id":  "193a2aee",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A (4/6 questions answered; Q5+Q6 rate-limited, synthesized from Q1–Q4 + Knowledge base)",
+        "extracted":  "2026-05-24",
+        "title":  "Developer Tools",
+        "covers":  "Gemini free tier limits (RPM/RPD/TPM per model tier, no token caching on OAuth, training data exposure, silent model downgrade), pipeline step allocation table (Gemini=discovery/verification/summarization; Claude=synthesis/judgment), URL grounding via Google Search + MCP web fetch + YOLO mode batch processing, optimal JSON handoff format with credibility scoring, NotebookLM integration reality (no native API — unofficial notebooklm-py + MCP bridge only), five failure modes (hallucination propagation/format mismatch/context scope drift/silent model downgrade/rate limit cascade), recommended 8-phase hybrid pipeline (Mint v2), token savings estimate (~80% cost reduction for source-heavy phases), **Antigravity CLI migration guide (June 18 2026 deadline):** binary `gemini` → `agy`, env var → `ANTIGRAVITY_API_KEY`, JSON flag → `--output-format json`, config dir → `~/.gemini/antigravity-cli/`, skills → Markdown `.agents/skills/`, Go binary improvements (parallel subagents, SSH-aware auth, system keyring)"
+    },
+    {
+        "notebook_id":  "64c9fd30-4c4a-485e-a965-598240099bdd",
+        "sources":  "7",
+        "tier":  "Lean Q\u0026A (3 questions)",
+        "extracted":  "2026-05-24",
+        "title":  "Personal AI Operating System",
+        "covers":  "Chatbot-to-OS transition (reactive session-based → proactive persistent system), virtual memory hierarchy (OS-inspired RAM+disk analogy, FIFO queue, Recall/Archival storage, memory pressure alerts at 70%), multi-anchor identity architecture (SOUL.md + MEMORY.md + PROCEDURES.md + SALIENCE.md + RELATIONS.md), continuous work and artifact creation (Projects, CLAUDE.md, Scheduled Tasks), hybrid retrieval routing (Query Router: focused=RAG/90% vs exhaustive=RLM), Lamarckian identity inheritance (new instances adopt refined preferences from previous sessions), practical implementation patterns (OS-inspired memory hierarchy + multi-anchor identity + hybrid retrieval + project-based artifact management)"
+    },
+    {
+        "notebook_id":  "f5cda305-5384-438b-8d8e-0e20ffaa789c",
+        "sources":  "40",
+        "tier":  "Lean Q\u0026A (5 questions, full answers)",
+        "extracted":  "2026-05-24",
+        "title":  "Multi-Agent Terminal Orchestration",
+        "covers":  "tmux as universal parallel execution layer (named panes, broadcast-prompt, git worktrees), Gemini CLI Subagent architecture (Maestro 4-phase orchestration, YAML agent definitions, context isolation, `@name` delegation syntax), Codex CLI tiered autonomy (suggest/auto-edit/full-auto, `/goal` autonomous loops, Starlark policy rules), `--yolo` vs `--full-auto` comparison (what each approves/blocks, sandbox mandate on Windows, model-level refusals), Gemini CLI vs Claude Code architectural comparison (Strategic Orchestrator model vs Integrated Parent model, A2A remote agents, browser agent, multi-directory workspaces, native hooks, deep git integration), community tools for parallel Claude Code (parallel-code/devteam/unitmux/tmux-agent-status/useful_tmux_commands), AutoGen/CrewAI/LangGraph CLI interfaces and terminal visibility styles, practical multi-pane Claude Code setup (named panes + git worktrees + --dangerously-skip-permissions pattern)"
+    },
+    {
+        "notebook_id":  "0b35bb85-58de-418c-8018-e5ca9c68f2d5",
+        "sources":  "4",
+        "tier":  "Lean Q\u0026A (4 questions)",
+        "extracted":  "2026-05-24",
+        "title":  "Prompt Caching Engineering",
+        "covers":  "Layered prompt structure (static system prompt → CLAUDE.md → session context → conversation messages), immutable tool definitions + Plan Mode pattern (EnterPlanMode/ExitPlanMode as permanent tools), Tool Search with defer_loading stubs, message-based state updates (not system prompt edits), cache-safe forking for compaction (same prefix + appended instruction), model consistency requirement, cache hit requirements (byte-for-byte prefix match, cache_control breakpoints, 1024/4096 token minimums, model-specific, 5min default TTL), common mistakes (dynamic timestamps, non-deterministic tool ordering, mid-session tool changes, system prompt edits for state, model switching mid-conversation, compaction cost trap), cost impact table (Sonnet: $3.00 base → $0.30 cache read; Opus: $15.00 → $1.50; Haiku: $0.25 → $0.03), benchmarks (10-turn 53% savings; 100k-book 90% savings), TTL options (5min 1.25x write / 1hr 2.0x write), cache hit rate treated as SEV incident by Claude Code team"
+    },
+    {
+        "notebook_id":  "963ed43c-2799-4938-8586-3da59f2ba4a7",
+        "sources":  "3",
+        "tier":  "Lean Q\u0026A (3 questions)",
+        "extracted":  "2026-05-24",
+        "title":  "Research-to-Action Architecture",
+        "covers":  "Two-layer architecture (Knowledge Base=NotebookLM / Builder=Antigravity/agentic env), 6 use case archetypes (Research Dashboards / Internal Business Tools / Content Systems / Knowledge-Powered Apps / Automated Reports / Interactive Study Tools), repeatability as core value (reports → report generators; content → content systems), eliminating blank-chat agent starts (knowledge base as pre-loaded context), source-grounded accuracy (bounded by research quality not training data), context-driven building pattern, multi-agent pipeline integration (Plan→Code→Run/Test), starting small recommendation (5 starter workflows)"
+    },
+    {
+        "notebook_id":  "13de5679-4b08-4236-a456-2531174134ee",
+        "sources":  "3",
+        "tier":  "Lean Q\u0026A (3 questions)",
+        "extracted":  "2026-05-24",
+        "title":  "Claude Skill Engineering",
+        "covers":  "Ben AI 5-component framework (Name+Trigger / Objective / Context / Step-by-Step Process / Rules+Self-Improving), skill anatomy (SKILL.md + 4 reference file types: text/MCP instructions/non-text assets/executable scripts), Clean SKILL.md Golden Rule (SOP only, all supplementary data → reference files), 4-question step design (what/where HITL/what context/what output), multi-option HITL prompt (propose 5 options not 1), self-learning loop (auto-save approved results as good examples), progressive updates (skill refines its own instructions), skill vs plugin distinction (plugin bundles skills+commands+agents+connectors), iteration decision tree (process fails→fix SKILL.md; lacks knowledge→add reference file; unwanted action→add rule; struggles with tool→teach then create MCP reference doc), comparison vs Projects/Custom GPT/n8n automation, skill position (middle ground: LLM reasoning + SOP structure + HITL + self-learning), ~5 rounds of iteration typical for peak quality"
+    },
+    {
+        "notebook_id":  "da5de0a8-c1af-4709-a44e-066facd5087f",
+        "sources":  "13",
+        "tier":  "Lean (ask endpoint rate-limited with stale conversation ID b105c699; synthesized from source fulltext per C-010 pattern — primary sources: OTel official spec, OpenObserve agent monitoring guide, MLflow top-5 tools 2026, SigNoz comparison, Helicone comparison)",
+        "extracted":  "2026-05-24",
+        "title":  "Agent Observability",
+        "covers":  "OTel GenAI semconv 1.41.0 span types (chat/generate_content/execute_tool/invoke_agent/invoke_workflow/create_agent/embeddings/retrieval — each with kind, name format, required attributes), full attribute taxonomy for inference spans (gen_ai.operation.name/provider.name/request.model/usage.input_tokens/usage.output_tokens/usage.cache_read.input_tokens/response.finish_reasons/conversation.id/request.temperature), tool span attributes (gen_ai.tool.name/type/call.id/call.arguments/call.result), minimum viable setup for custom pipelines (2-line auto-instrumentation via opentelemetry-instrumentation-anthropic + any OTLP backend), custom span attributes for agent context (agent.name/task.type/prompt.version/session.id), W3C traceparent propagation pattern for cross-agent trace correlation (inject on orchestrator / extract on worker), quality vs cost regression signal separation (cost: token spike/tool_call.count \u003e20/agent.steps overflow; quality: finish_reason=length rate/eval scores/prompt.version canary), platform comparison matrix (MLflow=Apache2.0+OTel-native+60-frameworks/Langfuse=MIT+ClickHouse/LangSmith=proprietary+LangGraph-native/Phoenix=ELv2+OpenInference+50-eval-metrics/Helicone=proxy-based+no-trace-trees), Four Pillars of LLM observability (distributed tracing/metrics/structured logs/evals), key production metrics (llm.usage.prompt_tokens/completion_tokens/duration/error.rate/tool_call.count/agent.steps with alert thresholds)"
+    },
+    {
+        "notebook_id":  "9f50ab2c-f357-442d-aacf-89a8e7ad1891",
+        "sources":  "15",
+        "tier":  "Lean (Q\u0026A rate-limited — C-010, 4th notebook in session; synthesized from official DSPy docs source fulltext)",
+        "extracted":  "2026-05-24",
+        "title":  "LLM Pipeline Optimization",
+        "covers":  "Core philosophy (programming not prompting — Signatures + Modules + Optimizer as the three pillars), Signatures as typed input/output contracts (inline `\"q -\u003e a\"` form vs class-based, Pydantic types, multimodal), built-in Modules catalog (Predict/ChainOfThought/ReAct/ProgramOfThought/BestOfN/Refine/MultiChainComparison), Optimizers catalog with selection guide (BootstrapFewShot for ~10 examples / BootstrapFewShotWithRandomSearch for 50+ / MIPROv2 for 200+ + Bayesian search / GEPA for trajectory-based reflection / BootstrapFinetune for distillation to small LMs / BetterTogether meta-optimizer), MIPROv2 3-stage mechanics (bootstrapping/grounded proposal/discrete search), typical cost ($2 USD ~10 min), DSPy vs LangChain vs prompt engineering comparison, use cases (RAG/agents/classification/entity extraction/financial analysis), v3.2.1 features (MCP integration, GEPA, RL optimization, streaming/async)"
+    },
+    {
+        "notebook_id":  "e210e48d-469c-4508-8728-cdaf818dba1f",
+        "sources":  "20",
+        "tier":  "",
+        "extracted":  "2026-05-24",
+        "title":  "Google Antigravity: Agent-First Development Platform",
+        "covers":  "What Antigravity is (agent-first IDE, not just a plugin), announcement timeline (Nov 2025 initial / May 2026 v2.0 at I/O 2026), Manager View + parallel agent UX, 93-subagent demonstration, comparison vs Claude Code / Cursor / Copilot, Firebase Studio successor and 2027 sunset, persistent code execution security vulnerability (MCP config exploit), community backlash against 2.0 UX, pricing tiers ($0/$100/$200/month), access surfaces (desktop/CLI/SDK/cloud)"
+    },
+    {
+        "notebook_id":  "faab43f1",
+        "sources":  "21",
+        "tier":  "",
+        "extracted":  "2026-05-24",
+        "title":  "Caveman Token Compression Skill",
+        "covers":  "Mechanical operation (SKILL.md context injection, not system prompt modification), installation methods (plugin marketplace vs manual SKILL.md copy), token reduction evidence (65% output average, 4–10% total session, 22–87% range), side effects (code quality unaffected, reasoning accuracy improves for standard tasks, Ultra level risks ambiguity), Pordee compatibility (untested simultaneous use — use sequentially), security assessment (iex installer = BLOCK, manual SKILL.md = safe), install recommendation (READY via manual method)"
+    },
+    {
+        "notebook_id":  "b3781a51-fdc4-4a91-8948-c74c0aa0f7d4",
+        "sources":  "16",
+        "tier":  "Lean (ask endpoint rate-limited with stale conversation ID; synthesized from source fulltext per C-010 pattern)",
+        "extracted":  "2026-05-24",
+        "title":  "Agent Evaluation",
+        "covers":  "Braintrust/LangSmith/RAGAS/Phoenix comparison (positioning, metrics, CI/CD integration), agent eval vs model eval distinction (static benchmarks vs trajectory metrics), RAGAS 4-metric decomposition (context_relevancy/context_recall/faithfulness/answer_relevancy), LLM-as-judge mechanics and failure modes (narcissism/position bias/verbosity bias/LLM jury mitigation), G-Eval (arXiv:2303.16634 — CoT scoring Spearman 0.514 with human on summarization), production CI/CD eval pattern (Braintrust GitHub Action native gate vs LangSmith manual scripting), NVIDIA 5-tip agent eval framework (TSR/Trajectory Efficiency/Tool Call Accuracy/Reasoning Soundness/Custom Metrics), reference-free eval without ground truth (LLM judge + behavioral consistency + production failure promotion)"
+    },
+    {
+        "notebook_id":  "e287553c-e878-46e3-987b-0ca780570ea8",
+        "sources":  "14",
+        "tier":  "Lean (Q\u0026A rate-limited — stale server-side conversation ID `36c7dc9a` persisted despite clear; synthesized from source fulltext + WebFetch)",
+        "extracted":  "2026-05-24",
+        "title":  "Vector Databases",
+        "covers":  "Architecture selection matrix (Chroma=dev/prototype SQLite-backed; Qdrant=production multi-agent MVCC+BQ; Weaviate=enterprise hybrid+knowledge-graph; Pinecone=managed zero-ops; pgvector=Postgres \u003c1M vectors), HNSW vs IVFFlat comparison (memory tradeoff 2–5x, O(log n) vs O(probes*cluster), recall 95%+ vs parameter-dependent, rebuild requirements), 4 production failure modes (write conflicts/state management breakdown/latency creep/cold start penalty + fix for each), LangGraph two-layer memory architecture (PostgresSaver=structured session state / vector store=semantic cross-session recall, integration pattern with user_id+timestamp filters), pgvector production thresholds and 4 common mistakes (seqscan/lists/maintenance_work_mem/embedding dimension mismatch), RAGAS 4-metric tuning guide (context_recall/faithfulness/context_precision/answer_relevancy — watch all four, targeted fixes per weak metric)"
+    },
+    {
+        "notebook_id":  "10672df3-6d88-4195-845e-43b638fcaf19",
+        "sources":  "15",
+        "tier":  "Lean (Q\u0026A rate-limited — C-010, 4th notebook in session; synthesized from source fulltext)",
+        "extracted":  "2026-05-24",
+        "title":  "Multi-Agent Frameworks",
+        "covers":  "StateGraph architecture (nodes/normal edges/conditional edges, typed state with TypedDict/Pydantic, reducer helpers), checkpointing system (MemorySaver vs PostgresSaver, thread_id as identity key, time-travel debugging), Human-in-the-Loop via `interrupt` + `Command(resume)` pattern, multi-agent patterns (shared scratchpad/Agent Supervisor/Hierarchical Teams/Send API fan-out), streaming modes (messages/updates/values/custom), production practices (state design, cycle guardrails with max_steps, error handling at 3 levels, LangSmith observability), LangGraph vs CrewAI vs AutoGen positioning table (state-machine vs role-based vs conversational)"
+    },
+    {
+        "notebook_id":  "2e46e276-bbcf-4c23-837d-9b53d87ce02f",
+        "sources":  "6",
+        "tier":  "Lean Q\u0026A (2 questions, combined topics)",
+        "extracted":  "2026-05-24",
+        "title":  "Cross-Framework Governance",
+        "covers":  "SARC governance framework (State/Action/Reward/Constraints — implementation-agnostic), four-point enforcement (Pre-Action Gate/Action-Time Monitor/Post-Action Auditor/Escalation Router), Authority Intersection requirement (every action at intersection of call-chain authorities), attribution-preserving trace trees (hierarchical not flattened), decidability rescue (evaluate constraints at deepest available layer), 4 cross-framework failure modes (constraint laundering/authority escalation/attribution dilution/decidability loss), security vulnerabilities (enforcement surface bypass/authority surface collapse/indirect prompt injection state contamination/prompt-level guardrail weakness), HITL with reversibility windows (τ_rev, queue stability monitoring, default-deny fail-safe), LangGraph interrupts + Command(resume) technical implementation, prompt-level vs tool/policy-layer enforcement distinction (prompt = probabilistic; tool/policy = structural), Regime B high-stakes deployment requirements"
+    },
+    {
+        "notebook_id":  "e093e75e-5d7d-49ec-aa5d-7a65e5de1c3d",
+        "sources":  "11",
+        "tier":  "Lean (Q\u0026A rate-limited — C-010, 3rd notebook in session; synthesized from source fulltext + summary)",
+        "extracted":  "2026-05-24",
+        "title":  "RAG Engineering",
+        "covers":  "Chunking strategies (fixed-size/recursive/sentence-based/semantic/structure-based — tradeoffs + production recommendation), embedding model selection (dimension vs performance, domain alignment, multilingual, MTEB benchmark, top models 2026), hybrid search (dense+sparse BM25 combination, Reciprocal Rank Fusion, when pure vector fails), reranking (cross-encoder/LLM-based/ColBERT/RRF strategies), RAGAS evaluation (Faithfulness metric mechanics, Answer Relevancy, Context Recall, test set requirements, production targets ≥0.85/≥0.80), Self-RAG (autonomous retrieval critique: Retrieve/Relevant/Support/Utility tokens, arxiv 2310.11511), advanced production patterns (query routing, multi-vector indexing, parent-child chunking, contextual retrieval)"
+    },
+    {
+        "notebook_id":  "ac89dca1-14d7-4e0d-9547-93806f64b77d",
+        "sources":  "10",
+        "tier":  "Lean (Q\u0026A rate-limited C-010; synthesized from official docs fulltexts — overview + agents + Anthropic integration pages)",
+        "extracted":  "2026-05-24",
+        "title":  "Structured Agent Frameworks",
+        "covers":  "Pydantic AI vs plain Pydantic vs raw Anthropic SDK distinction (Agent[Deps, Output] typed generic, self-correction loop, DI pattern), core agent constructor (deps_type + output_type + instructions), dependency injection via RunContext[Deps] (DB clients, config, state injection at run time), structured output validation + self-correction (Pydantic schema → LLM → retry loop on validation failure), tool types (function/plain/deferred-HITL/Capabilities bundles/toolsets/native), multi-agent patterns, Anthropic integration specifics (prompt caching: anthropic_cache/anthropic_cache_instructions/anthropic_cache_tool_definitions/CachePoint + 4-point limit management, task budgets beta for opus-4-7, service tier control, fast mode opus-4-6 only, Bedrock/Vertex/Foundry providers, Opus-4-7 auto-drop temperature/top_p/top_k), production stack (Logfire observability, Pydantic Evals, PydanticGraph for complex flows, durable execution via Temporal/DBOS/Prefect/Restate), use cases (structured extraction/customer support/SQL generation/RAG/multi-model pipelines), limitations vs LangGraph (no built-in state persistence, no built-in cross-session memory, PydanticGraph separate, self-correction token cost, HITL no workflow mgmt), comparison table vs LangGraph/LangChain/raw SDK"
+    },
+    {
+        "notebook_id":  "68172498-121c-4523-ab01-a8d5a161b54c",
+        "sources":  "13",
+        "tier":  "Lean (Q\u0026A rate-limited C-010; synthesized from arXiv paper fulltext + Letta blog fulltexts)",
+        "extracted":  "2026-05-24",
+        "title":  "Persistent Agent Memory",
+        "covers":  "MemGPT OS-inspired paging architecture (virtual context management, 3-tier hierarchy: main context/recall/archival), main context structure (system instructions + working context + FIFO queue + recursive summary), queue manager eviction mechanics (70% warning threshold / 100% flush threshold, recursive summary generation), function chaining for multi-hop retrieval (request_heartbeat=true pattern), benchmark results (MemGPT+GPT-4=92.5% DMR vs 32.1% baseline; nested KV retrieval at 0% for GPT-4 vs stable for MemGPT), Letta as MemGPT productionized (Memory Blocks as API objects with block_id, Jinja-compiled context, single perpetual thread, Agent File .af format), multi-agent shared memory blocks (sleep-time agents, collaborative memory), practical comparison table vs CLAUDE.md+MEMORY.md approach (mechanism/granularity/context cost/conflict handling/search), Letta evolution highlights (Context Repositories git-backed memory Feb 2026, Context Constitution Apr 2026, Letta Code app Apr 2026)"
+    },
+    {
+        "notebook_id":  "3fa4b2d5",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-23",
+        "title":  "Claude Code Professional Workflows",
+        "covers":  "Hybrid extraction strategy (AST/tree-sitter + semantic API + faster-whisper), knowledge graph node/edge structure (functions/classes/schemas + invokes/imports/inherits/\"Why\" nodes), five output formats (graph.html/GRAPH_REPORT.md/graph.json/call-flow HTML/SVG), Claude Code integration via pre-search hooks + Git hooks + MCP server (query_graph/get_neighbors/shortest_path/triage_prs), team workflow via committed graphify-out/ directory, six best practices, limitations (language ambiguity/indexing overhead/chunk gaps)"
+    },
+    {
+        "notebook_id":  "32595e15",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-23",
+        "title":  "AI Agent Identity and Architecture",
+        "covers":  "Four generational shifts (Prompt Engineering → Context Engineering → Intent Engineering → Specification Engineering), human role evolution (artisan → architect → strategist → governance designer), durable patterns (agent harness, ReAct loop, self-verification, memory tiering), obsolete patterns (stateless chatbots, manual context management, naive full-context, implicit intent), four-layer persistence architecture (Knowledge/Memory/Wisdom/Intelligence), Skill Bundles as Gen 4 practitioner artifact"
+    },
+    {
+        "notebook_id":  "f156669c-4553-4de4-8057-7cf39dbb6f10",
+        "sources":  "",
+        "tier":  "Quality Q\u0026A",
+        "extracted":  "2026-05-23",
+        "title":  "AI Agent Governance",
+        "covers":  ""
+    },
+    {
+        "notebook_id":  "3b189fd7",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-23",
+        "title":  "Claude Code and Obsidian",
+        "covers":  "Semantic Notes Vault MCP plugin (eight tool groups: vault/edit/view/graph/workflow/dataview/bases/system), TLS certificate trust fix (NODE_EXTRA_CA_CERTS, NOT NODE_TLS_REJECT_UNAUTHORIZED), Karpathy vault structure (raw/wiki/output + index files), bi-directional reinforcement loop mechanics, four failure modes (TLS failure/token bloat/certificate expiration/API cost from headless skills), five highest-productivity patterns (automation skills/integrated layout/hot reload/claude.md as operating instructions)"
+    },
+    {
+        "notebook_id":  "8ca7f140",
+        "sources":  "",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-23",
+        "title":  "Industry and Domain Applications",
+        "covers":  "Four root causes of 2–3x tokenization premium (no word boundaries/combining characters/English-centric training/UTF-8 byte fallback), direct/infrastructure/competitive economic implications, four optimization strategies (Thai-specific models: Typhoon 2.62x + OpenThaiGPT 3.5x efficiency / SuperBPE/MUTANT algorithms / post-training retrofitting / strategic provider selection), provider comparison table (OpenAI/Anthropic/Google/Typhoon/OpenThaiGPT), model selection decision framework by use case"
+    },
+    {
+        "notebook_id":  "bf4a5c29",
+        "sources":  "31",
+        "tier":  "Lean Q\u0026A (4 questions, full answers)",
+        "extracted":  "2026-05-22",
+        "title":  "Dotfiles and Configuration Management",
+        "covers":  "SKILL.md two-part structure (YAML frontmatter: name/description/model/tools/context:fork; Markdown body: workflow steps + exit criteria + anti-rationalization tables + examples), engineering skills catalog (diagnose 6-step bug loop, tdd Red-Green-Refactor, to-prd GitHub issue generation, to-issues tracer-bullet slices, improve-codebase-architecture, prototype, triage), productivity skills (handoff for session compaction, caveman 75% token reduction, grill-with-docs ubiquitous language building), three-tier progressive disclosure loading (~100 tokens metadata at load; ~5,000 full body on match; on-demand resources), anti-rationalization tables mechanism, hard exit criteria enforcement, scope discipline, TDD subagent isolation via context:fork, \"Real Engineer\" philosophy (AI as implementer, human as architect, proactive middle path, eternal fundamentals), adoption via npx skills add + SDLC slash commands"
+    },
+    {
+        "notebook_id":  "5f984fb4",
+        "sources":  "35",
+        "tier":  "P3 generate report (briefing-doc format)",
+        "extracted":  "2026-05-22",
+        "title":  "Finance / AI Research",
+        "covers":  "Paul Otlet\u0027s Mundaneum project, Universal Decimal Classification, world documentation system, precursor concepts to the World Wide Web and internet"
+    },
+    {
+        "notebook_id":  "e2de1d12-34b9-47db-be74-4664ea5186b7",
+        "sources":  "30",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-20",
+        "title":  "Discord Bot Development (dnd-payment-bot Project)",
+        "covers":  "Unit testing with partial mock interactions (vi.fn() pattern), logic separation (pure function + thin wrapper), Supabase client mock (chainable vi.fn()), libraries (discord.js-mock-interactions, discordjs-mock, gauntlet, fake-discord), integration testing pattern (staging guild + test bot token, STAGE env var), Supabase local CLI (supabase start + db reset), pgTAP for DB tests, GitHub Actions CI/CD (supabase/setup-cli, secret management, docker deploy on merge), E2E tools (fake-discord signed interactions, Pinggy tunnel for local webhook)"
+    },
+    {
+        "notebook_id":  "695d9550",
+        "sources":  "8",
+        "tier":  "Lean Q\u0026A (5 questions, full answers)",
+        "extracted":  "2026-05-20",
+        "title":  "AI Agent Engineering Patterns",
+        "covers":  "HTML vs. Markdown as agent planning formats, \"compute allocator\" role shift, micro software and disposable UI patterns, Brainstorm-Interview-Plan execution sequence, engineering tradeoffs (when-to-use heuristics), living design systems as just-in-time documentation, tools supporting HTML-centric workflows (Claude Code, Claude Artifacts, Claude for Chrome)"
+    },
+    {
+        "notebook_id":  "c77f4b63-564d-43a5-8e49-88179c904744",
+        "sources":  "17",
+        "tier":  "Lean Q\u0026A (5 questions, full answers)",
+        "extracted":  "2026-05-20",
+        "title":  "Claude Code Ecosystem",
+        "covers":  "Skills vs Plugins vs MCP Connectors (when to use each), community skill catalogs (Shyft 2,807+ w/ Gold/Silver/Bronze tiers; Antigravity 1,462+; alirezarezvani 313+), SKILL.md format (YAML frontmatter, bang-syntax, $ARGUMENTS, 500-line limit, progressive disclosure), Gmail MCP servers (timkulbaev/mcp-gmail, marlinjai/email-mcp, n24q02m/better-email-mcp via App Passwords), Google Calendar (caldav-mcp), Google Tasks (mcp-googletasks), MCP architecture (Tool Search for token efficiency, tools/resources/prompts)"
+    },
+    {
+        "notebook_id":  "6b9b4a20-3638-41c4-8f10-320e05af13e5",
+        "sources":  "21",
+        "tier":  "Lean (Q\u0026A rate-limited; synthesized from source fulltext per C-010)",
+        "extracted":  "2026-05-20",
+        "title":  "AI / LLM Research",
+        "covers":  "Facebook Login OAuth 2.0 flow (authorization code, state CSRF protection, HTTPS mandate), 5 token types (User/App/Page/System User/Client with lifetime rules and generation methods), Limited Login (OIDC-only, iOS privacy mode), 90-day permission expiry rule, permission scope architecture (default vs. extended; Standard vs. Advanced Access; App Review requirements), GDPR consent requirements, bot disclosure mandates (California/Germany), best practices (minimal permissions, long-lived token exchange, System User tokens for automation, never expose App Secret client-side), common pitfalls, cross-platform nav (web/iOS/Android/device/AR-VR), metadata parameter deprecation May 2026"
+    },
+    {
+        "notebook_id":  "691d4ae9-69fb-4321-ad5e-3d2f52ae2a5b",
+        "sources":  "19",
+        "tier":  "Lean (Q\u0026A rate-limited; synthesized from summary + source fulltext per C-010)",
+        "extracted":  "2026-05-20",
+        "title":  "Meta / Facebook Ecosystem",
+        "covers":  "Facebook UX evolution 2025-2026 (AI Age Assurance via bone/height analysis May 2026, Meta AI embedded throughout, Reels-first design), feed algorithm mechanics (4-stage ranking: inventory/signals/predictions/relevance; views metric replacing engagement; group content elevated), new features (WhatsApp Business AI, Reels cross-posting, AR effects), regional variation (India/SEA/Brazil high-growth; EU GDPR-reduced personalization), global usage trends (5.66B social media identities; Facebook 45+ fastest growing demo in developed markets; teen decline in West)"
+    },
+    {
+        "notebook_id":  "aafb4b5e",
+        "sources":  "",
+        "tier":  "generate_report (1 quota used)",
+        "extracted":  "2026-05-19",
+        "title":  "Knowledge Management and Obsidian",
+        "covers":  "Claude as Obsidian vault librarian, PARA framework (Projects/Areas/Resources/Archive), CLAUDE.md protocol for vault governance, automation rules, note standards, calm management principles"
+    },
+    {
+        "notebook_id":  "b6e7467a",
+        "sources":  "",
+        "tier":  "Lean",
+        "extracted":  "2026-05-19",
+        "title":  "LLM Token Economics",
+        "covers":  "Cache hit conditions, batch API usage, overconsumption patterns, multi-agent budget allocation, model tier selection strategies"
+    },
+    {
+        "notebook_id":  "a1d37fda-4329-44d0-b72d-d8a07d2655e8",
+        "sources":  "10",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-19",
+        "title":  "Thai Fintech / Payment APIs",
+        "covers":  "Full API request/response schema, all error codes (1000–1015), branchId + log=true behavior (auto-dedup + wrong-receiver rejection), quota mechanics (free 100/month, 1.0 THB over-limit), transDate `yyyyMMdd` / transTime `HH:mm:ss` formats, slipverify SDK inquiry() return shape, name truncation edge cases, BBL/SCB delay handling, deduplication strategy (log=true + DB-side transRef check)"
+    },
+    {
+        "notebook_id":  "4d69f4cd",
+        "sources":  "",
+        "tier":  "Lean",
+        "extracted":  "2026-05-19",
+        "title":  "Claude Code Agent View",
+        "covers":  "Multi-session persistence mechanisms, context compaction pipeline, session handoff patterns, shared state via files/MEMORY.md, session hygiene best practices, inter-session continuity strategies"
+    },
+    {
+        "notebook_id":  "30a0bbf3",
+        "sources":  "26",
+        "tier":  "Lean (confirmed)",
+        "extracted":  "2026-05-18 (full Q\u0026A, C-010 cooldown elapsed)",
+        "title":  "Finance / Personal Finance",
+        "covers":  "Behavioral gap interventions (5 categories: coaching +150bps/3A Framework, sustainable allocation, decision friction, logic documentation, operational guardrails), SPIVA translation (5 rules: passive default, expense ratio as primary criterion, 3-fund portfolio, index small-cap/international, never select on past performance), 30s moderate risk allocation framework (3D risk assessment, 70/30 target, 3-fund implementation, tax location), emotional vs financial risk tolerance gap (Maximum Tolerable Loss Rule: equity ≤ 2× tolerable dollar loss, Morningstar Mind the Gap 1.37%/year), behavioral destruction sequence (5 steps: FOMO buy → recency bias → panic sell → miss recovery → friction costs)"
+    },
+    {
+        "notebook_id":  "f18db711",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-18 (full Q\u0026A, C-010 cooldown elapsed)",
+        "title":  "AI Safety",
+        "covers":  "Multi-agent alignment failure modes (incentive exploitation, collective-cognition biases, governance failures, communication security), Claude Constitution vs RLHF behavioral outcomes (non-evasiveness, Pareto improvement, 4-tier priority hierarchy), NVIDIA NeMo guardrails (5 categories: input/output/dialog/retrieval/execution, proxy integration, hybrid fast/slow classifier pattern), MAST taxonomy (3 categories: FC1 System Design 44%, FC2 Inter-Agent 32%, FC3 Task Verification 23%), Frontier Model Forum deployment gates (5 elements: thresholds, risk ID, capability assessment, defense-in-depth, governance)"
+    },
+    {
+        "notebook_id":  "4c4ad8a8-9cfb-42ac-935b-05889e56a6a2",
+        "sources":  "38",
+        "tier":  "Lean",
+        "extracted":  "2026-05-18",
+        "title":  "Library Science and Knowledge Organization",
+        "covers":  "Foundational frameworks (Aristotelian categories/realism, Dewey Decimal/universalism, Ranganathan faceted/constructivism), taxonomy vs. ontology vs. folksonomy distinctions (with selection table), polyhierarchy handling mechanisms (preferred-term, faceted, ontological), digital-age critique (search vs. classification — both needed at different stack layers), failure modes (worldview commitment, combinatorial explosion, orphaning, vocabulary drift), structural properties for durability (documented principles, syntax/semantics separation, governance process), AI and Semantic Web applications"
+    },
+    {
+        "notebook_id":  "805afb77-4fcb-43d6-8e4f-3a8013d3f6b5",
+        "sources":  "50",
+        "tier":  "Lean Q\u0026A",
+        "extracted":  "2026-05-18",
+        "title":  "MCP Server Development",
+        "covers":  "Transport trade-offs (stdio vs. Streamable HTTP vs. legacy SSE), server lifecycle (initialization/capability negotiation/operation/shutdown), security hardening (OAuth 2.1 + PKCE, RBAC, JSON Schema input validation, sandboxing), Windows-specific compatibility issues (encoding, path parsing, named pipes, process lifecycle), structural quality patterns (tool granularity, error contracts, versioning, observability), production deployment (Docker, rate limiting, reverse proxy, MCP Inspector)"
+    },
+    {
+        "notebook_id":  "9b7df209",
+        "sources":  "",
+        "tier":  "Lean",
+        "extracted":  "2026-05-18",
+        "title":  "Multi-Agent Orchestration",
+        "covers":  "Queen+worker swarm architecture, collective memory system, 32 built-in plugins, model routing (GPT-4o/Claude/Gemini/Llama), MCP server integration, routing_policy conflict risk, deployment options (Docker/local), verdict: skip persistent install — invoke as MCP sub-tool for tasks exceeding Mint+Executor 2-3 round capacity"
+    },
+    {
+        "notebook_id":  "3b189fd7",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-17",
+        "title":  "Claude Code and Obsidian: Symbiotic Command Center",
+        "covers":  "Symbiotic integration model (Claude Code ↔ Obsidian reinforcement loop), integrated terminal workflow, AI-generated custom plugins, file structure for AI performance, keyboard shortcut bindings, memory construct (compounding value over sessions)"
+    },
+    {
+        "notebook_id":  "e7575776",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-17",
+        "title":  "LLM Engineering and Cost Optimization",
+        "covers":  "Three main techniques (prompt caching up to 90% off, Batch API 50% off, thinking budget control), Anthropic-exclusive stacking for 95% combined savings, optimal prompt ordering (system→tools→knowledge→dynamic), provider comparison (Anthropic/OpenAI/Google), cache hit/miss conditions, 20-block lookback trap, 15 RPM OpenAI limit, thinking budget calibration by task type"
+    },
+    {
+        "notebook_id":  "f0cd703f",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-17",
+        "title":  "Knowledge Management",
+        "covers":  "AI-managed Markdown knowledge base, cross.md schema system, tool stack (Obsidian/Cursor/Claude/Web Clipper), end-to-end ingest workflow, comparison vs RAG (scales to ~100k files; RAG better at millions), self-audit for gaps and contradictions, business/team applications, failure modes"
+    },
+    {
+        "notebook_id":  "7e3fcad4",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-17",
+        "title":  "Claude Code Ecosystem",
+        "covers":  "Three-layer architecture (Session Hook / Skills Markdown files / Iron Laws), trigger conditions, red flags, rationalization tables, brainstorming flow before coding, delete-and-restart enforcement on Iron Law violation, behavioral shifts produced"
+    },
+    {
+        "notebook_id":  "f805502e",
+        "sources":  "",
+        "tier":  "Lean web",
+        "extracted":  "2026-05-17",
+        "title":  "Prompt Engineering",
+        "covers":  "Chain-of-Thought (CoT) mechanics (few-shot vs zero-shot, ~100B parameter threshold, arithmetic/commonsense/symbolic reasoning improvements), Chain-of-X (CoX) framework (CoA: augmentation/retrieval; CoF: feedback loops/hallucination; CoM: multi-model chains), practical guidelines for agent pipelines"
+    },
+    {
+        "notebook_id":  "de2eb0be",
+        "sources":  "30",
+        "tier":  "Lean",
+        "extracted":  "2026-05-17",
+        "title":  "Psychology and Decision-Making",
+        "covers":  "Perrow\u0027s NAT (inevitable accidents in complex + tightly-coupled systems, 4 mechanisms), HRO theory (Weick/Sutcliffe\u0027s 5 collective mindfulness principles, NAT vs HRO contrast), FRAM method (hexagon model, 4 FRAM principles, variability-based analysis), systems approach synthesis, mapping to AI agent pipeline design"
+    },
+    {
+        "notebook_id":  "",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-17",
+        "title":  "D\u0026D Campaign",
+        "covers":  "Monten Gehenna (D\u0026D 2024 Vagabond, Nick-Vex Seamless Flow, 3 attacks/turn while preserving Bonus Action, STR 19, Agni \u0026 Rudra), Logan Algendia (Pathfinder Kineticist L3, Wood/Water elements, Battle Medicine + Risky Surgery, Gate Junction temp HP aura, 44 HP)"
+    },
+    {
+        "notebook_id":  "9740b398",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-17",
+        "title":  "Career and Industry",
+        "covers":  "KongRuksiam free Thai-language ebook collection (GitHub: kongruksiamza/ebook-for-education), topics: Python/Java/C/PHP/HTML5/CSS3/JS/React/Docker/Prompt Engineering, CC BY-NC license, Udemy workshop courses, coupon code CP052026"
+    },
+    {
+        "notebook_id":  "3d80408e",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "2026-05-04",
+        "title":  "Claude Code: Transforming Workflow with AI Agents",
+        "covers":  "Claude Code workflows, sub-agents, MCP integrations, CLAUDE.md structure, best practices"
+    },
+    {
+        "notebook_id":  "3d80408e",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Claude Code: Comprehensive Technical Briefing",
+        "covers":  "Architecture, CLI reference, sub-agent patterns, permission modes, actionable insights"
+    },
+    {
+        "notebook_id":  "3d80408e",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Claude Code: Comprehensive Systems and Workflow Study Guide",
+        "covers":  "Core concepts \u0026 architecture, configuration hierarchy (5-tier priority system), CLI commands \u0026 flags, permission modes (default/acceptEdits/plan/auto/bypassPermissions), CLAUDE.md structure, agentic workflow glossary, session hygiene best practices"
+    },
+    {
+        "notebook_id":  "de432ba4",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Greek Mythology",
+        "covers":  "Divine genealogy, 12 Olympians, Titanomachy, themes (wisdom vs. brute force, seasons, divine indifference), quotes from Iliad and Hesiod"
+    },
+    {
+        "notebook_id":  "a10ac2c0",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Real Estate",
+        "covers":  "Full refresh — Bangkok 2026 rental market, BTS/MRT transit access pricing, expat neighborhood guides, lease contract terms, digital rental platforms"
+    },
+    {
+        "notebook_id":  "",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "NotebookLM + Claude + Obsidian Workflow",
+        "covers":  "Layer model (Source→NotebookLM→Claude→Obsidian), workflow patterns, automated sync, common pain points, tool comparison table"
+    },
+    {
+        "notebook_id":  "",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "AI Coding Agents 2026: Codex vs Claude Code vs Gemini CLI",
+        "covers":  "SWE-bench benchmarks, feature comparison (context window, output tokens, pricing, GitHub integration), strengths per tool, decision guide, key insight on convergence"
+    },
+    {
+        "notebook_id":  "3d80408e",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Claude Code: Mobile Dispatch and Remote Control",
+        "covers":  "Dispatch vs Remote Control, `claude remote-control`, `--teleport`, `--remote` flags, mobile-to-terminal workflow"
+    },
+    {
+        "notebook_id":  "05f8780c",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Tutorial / Learning",
+        "covers":  "Full refresh — OpenAI Codex agentic capabilities, AI coding agent comparisons (Codex vs Copilot vs Claude Code), AGENTS.md files, sandboxed environments, developer productivity impact data"
+    },
+    {
+        "notebook_id":  "81af859c",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Agent Harness Engineering",
+        "covers":  "Full refresh — LLM routing optimization, cascading tier systems, cost/accuracy tradeoffs, production harness patterns"
+    },
+    {
+        "notebook_id":  "82878cf3",
+        "sources":  "26",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "AI Development / Engineering",
+        "covers":  "GraphRAG vs. traditional vector RAG (semantic density failure, multi-hop reasoning, chunk fragmentation), KB vs KG comparison, KG construction (LLM-based vs. dependency-based/SpaCy — 94% performance at fraction of cost), pipeline components (DocumentParser/HybridChunker/EntityRelationNormalizer/GraphProducer), hybrid retrieval (vector + graph traversal), Leiden algorithm for community detection, Contextual RAG, Agentic GraphRAG, RAGAS evaluation metrics"
+    },
+    {
+        "notebook_id":  "9eb9f9a8",
+        "sources":  "56",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Finance / Investment",
+        "covers":  "AI investment trends, global market outlook 2026, emerging market risks, geopolitical volatility factors, portfolio positioning strategies"
+    },
+    {
+        "notebook_id":  "296922f4",
+        "sources":  "50",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "TradingAgents: Multi-Agent LLM Financial Trading Framework",
+        "covers":  "Full refresh — multi-agent LLM trading framework, role specialization, structured communication, backtesting methodology, risk-adjusted performance"
+    },
+    {
+        "notebook_id":  "",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Claude Agent SDK and Claude Code Ecosystem",
+        "covers":  "Agentic loop, design philosophy (\"giving Claude a computer\"), long-running agent strategies, multi-surface deployment (CLI/Desktop/GitHub Actions/Remote Control), permission architecture, sandboxing"
+    },
+    {
+        "notebook_id":  "f8e88eec",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Claude Code: Remote Agent Control Study Guide",
+        "covers":  "Agentic loop (Gather → Action → Verify), context gathering (agentic search, semantic search, subagents, compaction), action execution (bash, code generation, MCP), verification strategies (rules-based, visual, LLM judge), agent teams vs subagents, long-running harnesses, CLI commands, permission modes, security \u0026 sandboxing, glossary \u0026 practice questions"
+    },
+    {
+        "notebook_id":  "f8e88eec-02de-4fa0-b314-7871af1ec349",
+        "sources":  "",
+        "tier":  "",
+        "extracted":  "",
+        "title":  "Claude Code: Remote Agent Control",
+        "covers":  "Remote Control setup, subscription requirements, RC vs Web comparison, security architecture, Windows WebDAV warning, changelog highlights"
+    }
+]

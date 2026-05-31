@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>คลังความรู้ · Moonlight Tavern</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="moon">🌙</span><span data-i18n="brand">โรงเตี๊ยมแสงจันทร์</span></a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">หน้าแรก</a>
+        <a href="agents.html" data-i18n="nav.agents">ทีมงาน</a>
+        <a href="pipeline.html" data-i18n="nav.pipeline">ขั้นตอน</a>
+        <a href="knowledge.html" data-i18n="nav.knowledge">คลังความรู้</a>
+      </div>
+      <button class="lang-toggle" type="button">EN</button>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="hero" style="padding:54px 0 18px">
+      <h1 data-i18n="kb.title">คลังความรู้</h1>
+      <p class="lede" data-i18n="kb.lede">หัวข้อวิจัยทั้งหมดที่สกัดจาก NotebookLM</p>
+    </header>
+
+    <section class="section">
+      <div class="kb-controls">
+        <input id="kb-search" type="search" data-i18n-ph="kb.search" placeholder="ค้นหาหัวข้อ…" />
+        <select id="kb-sort">
+          <option value="newest" data-i18n="kb.sort.newest">ใหม่สุดก่อน</option>
+          <option value="oldest" data-i18n="kb.sort.oldest">เก่าสุดก่อน</option>
+          <option value="title" data-i18n="kb.sort.title">เรียงตามชื่อ</option>
+        </select>
+        <span class="kb-count" id="kb-count"></span>
+      </div>
+      <div class="grid cols-3" id="kb-grid"></div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p data-i18n="footer.built">สร้างโดยทีม Moonlight Tavern</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/knowledge.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+name: Deploy Moonlight Tavern to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # research.json is committed in the repo, but regenerate if the
+      # index is ever vendored in. Safe no-op when the index is absent.
+      - name: Regenerate research.json (if index present)
+        shell: pwsh
+        run: |
+          $idx = "data/_index_source.md"
+          if (Test-Path $idx) {
+            ./scripts/generate_research_json.ps1 -IndexPath $idx -OutPath "data/research.json"
+          } else {
+            Write-Host "No vendored index; using committed data/research.json"
+          }
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

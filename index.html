@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonlight Tavern — โรงเตี๊ยมแสงจันทร์</title>
+  <meta name="description" content="A field guide to the Cawfee agent crew — pipeline, agents, and knowledge vault." />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="moon">🌙</span><span data-i18n="brand">โรงเตี๊ยมแสงจันทร์</span></a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">หน้าแรก</a>
+        <a href="agents.html" data-i18n="nav.agents">ทีมงาน</a>
+        <a href="pipeline.html" data-i18n="nav.pipeline">ขั้นตอน</a>
+        <a href="knowledge.html" data-i18n="nav.knowledge">คลังความรู้</a>
+      </div>
+      <button class="lang-toggle" type="button">EN</button>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <!-- HERO -->
+    <header class="hero">
+      <h1><span class="moon">🌙</span> <span data-i18n="brand">โรงเตี๊ยมแสงจันทร์</span></h1>
+      <p class="tagline" data-i18n="home.tagline">ที่ซึ่งทีมเอเจนต์มาพบกัน</p>
+      <p class="lede" data-i18n="home.lede">เว็บอธิบายการทำงานของทีม Cawfee</p>
+
+      <!-- pipeline diagram -->
+      <div class="diagram">
+        <span class="node user" data-i18n="node.user">ผู้ใช้</span>
+        <span class="arrow">→</span>
+        <span class="node cawfee">🐦‍⬛ Cawfee</span>
+        <span class="arrow">→</span>
+        <span class="node fan">
+          <span class="sub mint">🌿 Mint</span>
+          <span class="sub oz">📚 Oz</span>
+          <span class="sub iicsa">🔎 Iicsa</span>
+          <span class="sub evan">⚙️ Evan</span>
+        </span>
+        <span class="arrow">→</span>
+        <span class="node vault" data-i18n="node.vault">คลังความรู้</span>
+      </div>
+
+      <div style="margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="lang-toggle" href="agents.html" style="border-style:solid;border-color:var(--accent-warm);color:var(--accent-warm)" data-i18n="home.cta.agents">ดูทีมงาน →</a>
+        <a class="lang-toggle" href="knowledge.html" style="border-style:solid;border-color:var(--accent-warm);color:var(--accent-warm)" data-i18n="home.cta.knowledge">เปิดคลังความรู้ →</a>
+      </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="section fade-up">
+      <div class="section-title"><h2 data-i18n="home.stats.title">ตัวเลขในคลัง</h2></div>
+      <div class="stats">
+        <div class="stat"><span class="num" id="stat-notebooks">—</span><span class="label" data-i18n="stat.notebooks">สมุดวิจัย</span></div>
+        <div class="stat"><span class="num" id="stat-sources">—</span><span class="label" data-i18n="stat.sources">แหล่งข้อมูล</span></div>
+        <div class="stat"><span class="num" id="stat-reports">—</span><span class="label" data-i18n="stat.reports">รายงาน</span></div>
+      </div>
+    </section>
+
+    <!-- FLOW PREVIEW -->
+    <section class="section fade-up">
+      <div class="section-title"><h2 data-i18n="home.flow.title">สายธารงาน</h2></div>
+      <div class="flow" id="flow"></div>
+    </section>
+
+    <!-- AGENT PREVIEW -->
+    <section class="section fade-up">
+      <div class="section-title"><h2 data-i18n="agents.title">ทีมงานโรงเตี๊ยม</h2></div>
+      <div class="grid cols-3" id="agent-preview"></div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p data-i18n="footer.built">สร้างโดยทีม Moonlight Tavern</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modal"><div class="modal modal-body"></div></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // populate stats from research.json (graceful if missing)
+    fetch("data/research.json", { cache: "no-store" })
+      .then(r => r.ok ? r.json() : [])
+      .then(j => {
+        const rows = Array.isArray(j) ? j : (j.topics || []);
+        const nb = rows.length;
+        const src = rows.reduce((s, r) => s + (parseInt(r.sources) || 0), 0);
+        document.getElementById("stat-notebooks").textContent = nb || "0";
+        document.getElementById("stat-sources").textContent = src || "0";
+        document.getElementById("stat-reports").textContent = nb || "0";
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

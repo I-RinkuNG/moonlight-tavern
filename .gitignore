@@ -1,0 +1,8 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+*.swp
+.vscode/
+
+# local index copy (never commit the raw research index)
+data/_index_source.md
