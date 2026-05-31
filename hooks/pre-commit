@@ -1,0 +1,20 @@
+#!/bin/sh
+# Moonlight Tavern pre-commit hook
+# Regenerate data/research.json from the NotebookLM research index, then re-stage it,
+# so the committed knowledge browser is always in sync with the latest research.
+# Install with: pwsh ./scripts/install-hooks.ps1
+
+if command -v powershell.exe >/dev/null 2>&1; then PS=powershell.exe
+elif command -v pwsh >/dev/null 2>&1; then PS=pwsh
+else
+  echo "pre-commit: no PowerShell found, skipping research.json regen" >&2
+  exit 0
+fi
+
+"$PS" -NoProfile -ExecutionPolicy Bypass -File scripts/generate_research_json.ps1 >/dev/null 2>&1 || {
+  echo "pre-commit: generate_research_json.ps1 failed (index missing?), keeping existing data/research.json" >&2
+  exit 0
+}
+
+git add data/research.json
+exit 0

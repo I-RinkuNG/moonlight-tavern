@@ -18,14 +18,35 @@ async function loadKnowledge() {
     host.innerHTML = `<p class="chalk-sub">${STRINGS[lang]["kb.loaderr"]}</p>`;
     return;
   }
+  buildCategoryOptions();
   wireControls();
   renderKB();
+}
+
+/* fill #kb-cat with the categories actually present in the data */
+function buildCategoryOptions() {
+  const sel = document.getElementById("kb-cat");
+  if (!sel) return;
+  const lang = getLang();
+  const prev = sel.value;
+  const cats = [...new Set(KB_DATA.map(r => r.category).filter(Boolean))]
+    .sort((a, b) => labelFor(a, lang).localeCompare(labelFor(b, lang)));
+  sel.innerHTML =
+    `<option value="">${STRINGS[lang]["kb.cat.all"]}</option>` +
+    cats.map(c => `<option value="${c}">${labelFor(c, lang)}</option>`).join("");
+  sel.value = prev;
+}
+
+function labelFor(cat, lang) {
+  return (STRINGS[lang] && STRINGS[lang]["cat." + cat]) || cat;
 }
 
 function currentView() {
   const q = (document.getElementById("kb-search").value || "").toLowerCase().trim();
   const sort = document.getElementById("kb-sort").value;
+  const cat = (document.getElementById("kb-cat") || {}).value || "";
   let rows = KB_DATA.filter(r => {
+    if (cat && r.category !== cat) return false;
     if (!q) return true;
     return (r.title + " " + (r.covers || "") + " " + (r.tier || "")).toLowerCase().includes(q);
   });
@@ -67,9 +88,12 @@ function renderKB() {
 function wireControls() {
   const search = document.getElementById("kb-search");
   const sort = document.getElementById("kb-sort");
+  const cat = document.getElementById("kb-cat");
   if (search) search.addEventListener("input", renderKB);
   if (sort) sort.addEventListener("change", renderKB);
-  document.addEventListener("langchange", renderKB);
+  if (cat) cat.addEventListener("change", renderKB);
+  // rebuild category labels (keep selection) then re-render on language switch
+  document.addEventListener("langchange", () => { buildCategoryOptions(); renderKB(); });
 }
 
 function escapeHtml(s) {

@@ -50,6 +50,15 @@ const STRINGS = {
     "kb.sources": "แหล่ง",
     "kb.empty": "ไม่พบหัวข้อที่ตรงกับการค้นหา",
     "kb.loaderr": "โหลดข้อมูลไม่สำเร็จ — รัน generate_research_json.ps1 ก่อน",
+    "kb.cat.all": "ทุกหมวด",
+    "cat.agents": "เอเจนต์ AI",
+    "cat.claude": "Claude & LLM",
+    "cat.knowledge": "ความรู้ & วิจัย",
+    "cat.devtools": "เครื่องมือนักพัฒนา",
+    "cat.finance": "การเงิน",
+    "cat.thai": "ภาษาไทย",
+    "cat.governance": "กำกับ & ประเมิน",
+    "cat.other": "อื่นๆ",
 
     /* footer */
     "footer.built": "สร้างโดยทีม Moonlight Tavern · อัพเดทอัตโนมัติจาก GitHub"
@@ -94,6 +103,15 @@ const STRINGS = {
     "kb.sources": "sources",
     "kb.empty": "No topics match your search",
     "kb.loaderr": "Could not load data — run generate_research_json.ps1 first",
+    "kb.cat.all": "All categories",
+    "cat.agents": "AI Agents",
+    "cat.claude": "Claude & LLMs",
+    "cat.knowledge": "Knowledge & Research",
+    "cat.devtools": "Dev Tools",
+    "cat.finance": "Finance",
+    "cat.thai": "Thai",
+    "cat.governance": "Governance & Eval",
+    "cat.other": "Other",
 
     "footer.built": "Built by the Moonlight Tavern crew · auto-updated from GitHub"
   }

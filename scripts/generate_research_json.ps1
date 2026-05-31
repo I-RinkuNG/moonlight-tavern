@@ -21,9 +21,29 @@ $lines = Get-Content -LiteralPath $IndexPath -Encoding UTF8
 $topics = New-Object System.Collections.Generic.List[object]
 $cur = $null
 
+# derive a coarse category from title + covers (priority order: first match wins)
+function Get-Category {
+  param([string]$text)
+  $t = $text.ToLower()
+  $rules = [ordered]@{
+    "thai"       = 'thai|pdpa|ไทย|promptpay|slip'
+    "finance"    = 'financ|trading|\bstock\b|equity|invoice|\bpayment\b|\btax\b|sec edgar|promptpay'
+    "agents"     = 'agent|orchestrat|multi-agent|swarm|crew|autonomous|harness|recursive self'
+    "claude"     = 'claude|anthropic|\bllm\b|prompt|token|gemini|gpt|model rout'
+    "devtools"   = 'terminal|\bcli\b|rust|\bide\b|editor|vim|tmux|warp|tauri|notebooklm|obsidian'
+    "knowledge"  = 'knowledge|research|vault|para|note|librarian|mytholog|philosoph|history'
+    "governance" = 'governanc|safety|eval|validation|verif|quality gate|compliance|security'
+  }
+  foreach ($k in $rules.Keys) { if ($t -match $rules[$k]) { return $k } }
+  return "other"
+}
+
 function Save-Cur {
   param($c, $list)
-  if ($c -and $c.title) { $list.Add([pscustomobject]$c) | Out-Null }
+  if ($c -and $c.title) {
+    $c.category = Get-Category ("$($c.title) $($c.covers)")
+    $list.Add([pscustomobject]$c) | Out-Null
+  }
 }
 
 foreach ($line in $lines) {
@@ -37,6 +57,7 @@ foreach ($line in $lines) {
       tier        = ""
       extracted   = ""
       covers      = ""
+      category    = "other"
     }
     continue
   }
